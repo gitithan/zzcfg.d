@@ -139,6 +139,10 @@
          ;;"* Tips %U\n\n\s\s%?\n %i\n" :prepend t :empty-lines 1)
 	 "* %A%?\n %i\n" :prepend t :empty-lines 1)
 
+	 ("n" "ns" entry (file+headline "~/Plans/ns.org" "ns-tips")
+         ;;"* Tips %U\n\n\s\s%?\n %i\n" :prepend t :empty-lines 1)
+	 "* %A%?\n %i\n" :prepend t :empty-lines 1)
+
 	("m" "DailyReview" entry (file+headline "~/Plans/notes.org.gpg" "Daily Review")
          "* %U :COACH: \n\n%[~/org/dailyreview.txt]\n" :prepend t)
 

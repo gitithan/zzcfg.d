@@ -62,17 +62,31 @@
 ;config of anyting
 ;--------------------
 (require 'anything)
-(require 'anything-ipython)
-(when (require 'anything-show-completion nil t)
-   (use-anything-show-completion 'anything-ipython-complete
-                                 '(length initial-pattern)))
+;(require 'anything-ipython)
+;(when (require 'anything-show-completion nil t)
+;   (use-anything-show-completion 'anything-ipython-complete
+;                                 '(length initial-pattern)))
 
+(require 'anything-ipython)
+(add-hook 'python-mode-hook #'(lambda ()
+                                (define-key py-mode-map (kbd "M-<tab>") 'anything-ipython-complete)))
+(add-hook 'ipython-shell-hook #'(lambda ()
+                                  (define-key py-mode-map (kbd "M-<tab>") 'anything-ipython-complete)))
+;;If you want to use anything-show-completion.el,(facultative)
+;;<http://www.emacswiki.org/cgi-bin/emacs/anything-show-completion.el>
+;;add these lines:
+(when (require 'anything-show-completion nil t)
+  (use-anything-show-completion 'anything-ipython-complete
+                                '(length initial-pattern)))
+
+ 
 
 ;------------------
 ;ipython setting
 ;------------------
 (require 'ipython)
-
+(setq py-python-command-args '( "--colors" "Linux"))	;;解决了-olors 错误提示
+(setq ipython-completion-command-string "print(';'.join(get_ipython().Completer.complete('%s')[1])) #PYTHON-MODE SILENT\n")
 
 ;------------------
 ;comint

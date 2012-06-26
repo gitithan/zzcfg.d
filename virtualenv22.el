@@ -204,7 +204,7 @@ the virtual environment or if not a string then query the user."
 			   "Virtualenv to activate"
 			   (when default
 			     (format " (default %s)" default))
-			   path-separator " "))	;; chage ": " to "; " for win7
+			   ": "))
 		  ;; look for directories in virtualenv-root that
 		  ;; contain a bin directory for tab-completion
 		  (dirs (remove
@@ -213,7 +213,7 @@ the virtual environment or if not a string then query the user."
 			  (lambda (d)
 			    (when (file-exists-p
 				   (expand-file-name
-				    (concat d "/Scripts")
+				    (concat d "/bin")
                                     root))
 			      d))
 			  (directory-files root nil "^[^.]"))))
@@ -237,7 +237,7 @@ the virtual environment or if not a string then query the user."
 	      (kill-buffer buffer))
 	    (setq virtualenv-workon-session env)
             (let* ((bin (expand-file-name
-                         (concat env "/Scripts")
+                         (concat env "/bin")
                          virtualenv-root))
                    (oldpath (or (car virtualenv-saved-path)
                                 (getenv "PATH")))
@@ -245,7 +245,7 @@ the virtual environment or if not a string then query the user."
                                 exec-path)))
               (setq virtualenv-saved-path (cons oldpath oldexec))
               (add-to-list 'exec-path bin)
-              (setenv "PATH" (concat bin path-separator oldpath)))	;;chage ":" to ";" for win7 ;;change ";" to path-separator
+              (setenv "PATH" (concat bin ":" oldpath)))
 	    (when virtualenv-workon-starts-python
 	      (cond ((fboundp 'python-shell-switch-to-shell)
                      (python-shell-switch-to-shell))
@@ -253,6 +253,8 @@ the virtual environment or if not a string then query the user."
 		     (py-shell))
 		    ((fboundp 'python-shell)
 		     (python-shell))
+		    ((fboundp 'run-python)
+		     (run-python))
 		    (t (error "Could not start a python shell!"))))
 	    (message (format "Now using virtualenv: %s" env)))
 	(message "Not changing virtualenv")))))
@@ -292,7 +294,8 @@ the virtual environment or if not a string then query the user."
 ;; adding defadvice to py-shell and python-shell.
 (dolist (list '((python-shell-switch-to-shell . "python")
                 (py-shell . "python-mode")
-		(python-shell . "python")))
+		(python-shell . "python")
+		(run-python . "python")))
   (let* ((func (car list))
 	 (file (cdr list))
 	 (doc (format "Set the environment with virtualenv before running %s." func)))
@@ -311,7 +314,7 @@ the virtual environment or if not a string then query the user."
 	     (let* ((activate (expand-file-name
 			       "activate"
 			       (expand-file-name
-                                (concat workon "/Scripts")
+                                (concat workon "/bin")
                                 virtualenv-root)))
 		    (process-environment
 		     (when (file-exists-p activate)
@@ -319,7 +322,7 @@ the virtual environment or if not a string then query the user."
 			(shell-command-to-string
 			 (format "source %s; (cd %s && env)"
 				 activate default-directory))
-			"\n")))	;;change "\n" to ";" for win7
+			"\n")))
 		    (exec-path (split-string (getenv "PATH") path-separator)))
 	       ad-do-it
 	       (hack-local-variables)
@@ -406,3 +409,5 @@ and `file-local-variables-alist', without applying them."
      (add-hook 'dired-mode-hook 'virtualenv-minor-mode-on t)))
 
 (provide 'virtualenv)
+
+;;; virtualenv.el ends here

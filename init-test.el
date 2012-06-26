@@ -83,4 +83,65 @@
 ;(load-file "~/zzcfg.d/graphviz-dot-mode.el")
 
 
+;---------------------
+;keyhh.exe chm file lookup
+;---------------------
+(defun chm-keyword-lookup (typeid help-file)
+    "lookup a keyword in a CHM file and display it"
+    (interactive)
+    (start-process "CHM keyword lookup" nil
+       "keyhh.exe"
+       (concat "-" typeid) "-#klink"
+       (format "'%s'" (thing-at-point 'symbol))
+       help-file )
+)
+
+
+
+;;;note: KeyHH.exe needs to be in $PATH.
+;;;KeyHH -MyHelp -#klink "ActiveX Control Wizard" htmlhelp.chm
+;(defun keyword-help-lookup-chm (help-file keyword)
+;  "lookup a keyword in a CHM file and display it"
+;    (start-process "keyhh" nil
+;		   "keyhh.exe"
+;		   (concat "-" (symbol-name major-mode))
+;		   "-#klink" (format "'%s'" keyword)
+;		   help-file )
+;    (set-process-query-on-exit-flag (get-process "keyhh") nil)
+;    )
+
+
+;;php
+;(defun chm-keyword-lookup-php ()
+;   (interactive)
+;   (chm-keyword-lookup "PHP" "e:/Apache2.2/php_manual_en.chm")
+;)
+;
+;(define-key php-mode-map (kbd "C-h C-k") 'chm-keyword-lookup-php )
+
+
+;;python
+(defun chm-keyword-lookup-py ()
+   (interactive)
+   (chm-keyword-lookup "PYTHON" "C:/Python27/Doc/python273.chm")
+)
+
+(define-key py-mode-map (kbd "C-h C-k") 'chm-keyword-lookup-py )
+
+
+;;scrapy
+(defun chm-keyword-lookup-scrapy ()
+   (interactive)
+   (chm-keyword-lookup "Scrapy" "E:/Python programming books/scrapy0.14.doc.chm")
+)
+
+(define-key py-mode-map (kbd "C-h C-o") 'chm-keyword-lookup-scrapy )
+
+
+;----------
+;test for ioccur
+;----------
+(require 'ioccur)
+
+
 (provide 'init-test)
