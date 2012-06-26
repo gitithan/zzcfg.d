@@ -10,6 +10,7 @@
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/ergoemacs-keybindings-5.3.9"))
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/sunrise-commander"))
 (add-to-list 'load-path (expand-file-name "~/.vtenvs"))
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/hideshow-org"))
 ;(add-to-list 'load-path "~/zzcfg.d/")
 ;(add-to-list 'load-path "~/zzcfg.d/pyide")
 ;(add-to-list 'load-path "~/zzcfg.d/ergoemacs-keybindings-5.3.9")
@@ -79,6 +80,17 @@
 ;---------------------
 (require 'init-smooth-scroll)
 
+
+;---------------
+;hideshow-code
+;---------------
+;(require 'init-hideshow-org)
+
+
+;---------------
+;py-hideshow-mode
+;---------------
+(require 'init-py-hideshow)
 
 ;----------
 ;字体
