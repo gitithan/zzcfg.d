@@ -61,7 +61,7 @@
 ;add virtualenv
 ;-------------------
 (require 'virtualenv)
-;;(setq debug-on-error t)
+(setq debug-on-error t)
 
 
 ;----------------------
@@ -69,13 +69,6 @@
 ;----------------------
 ;;;;(require 'sunrise-commander)
 
-
-;--------------------
-;patch for ergoemacs's key-binding
-;--------------------
-;(setq map (make-sparse-keymap))
-;(define-key map "\M-o" 'forward-char)
-;(define-key map "\M-o" 'forward-paragraph)
 
 ;-------------------
 ;graphviz-dot-mode
@@ -142,6 +135,17 @@
 ;test for ioccur
 ;----------
 (require 'ioccur)
+
+
+;------------------
+;mult-occur
+;------------------
+(defun my-multi-occur-in-matching-buffers (regexp &optional allbufs)
+  "Show all lines matching REGEXP in all buffers."
+  (interactive (occur-read-primary-args))
+  (multi-occur-in-matching-buffers ".*" regexp))
+;;;;(global-set-key (kbd "C-M-o") 'my-multi-occur-in-matching-buffers)
+(global-set-key (kbd "C-8") 'my-multi-occur-in-matching-buffers)
 
 
 (provide 'init-test)

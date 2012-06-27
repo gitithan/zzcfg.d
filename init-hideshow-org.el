@@ -1,6 +1,3 @@
-;(require 'hideshow-org)
-;(global-set-key "\C-ch" 'hs-org/minor-mode)
-
 (dolist (hook (list 'c-mode-common-hook
             'emacs-lisp-mode-hook
             'java-mode-hook
@@ -21,5 +18,14 @@
   "hideshow-expand affected block when using goto-line in a collapsed buffer"
   (save-excursion
     (hs-show-block)))
+
+
+;-------------
+;test
+;-------------
+;(require 'hideshow)
+;(add-hook 'python-mode-hook 'hs-minor-mode)
+;(add-hook 'sh-mode-hook     'hs-minor-mode)
+;(define-key hs-minor-mode-map [mouse-3] 'hs-mouse-toggle-hiding)
 
 (provide 'init-hideshow-org)

@@ -1,10 +1,9 @@
 ;;; virtualenv.el --- Virtualenv for Python  -*- coding: utf-8 -*-
 
-;; Copyright (c) 2010-2012 Aaron Culich
+;; Copyright (c) 2010 Aaron Culich
 
 ;; Author: Aaron Culich <aculich@gmail.com>
 ;; Maintainer: Aaron Culich <aculich@gmail.com>
-;; Version: 1.1
 ;; Created: September 2010
 ;; Keywords: python virtualenv
 ;; Vcs-git: git://github.com/aculich/virtualenv.git
@@ -205,7 +204,7 @@ the virtual environment or if not a string then query the user."
 			   "Virtualenv to activate"
 			   (when default
 			     (format " (default %s)" default))
-			   ": "))
+			   path-separator " "))	;; chage ": " to "; " for win7
 		  ;; look for directories in virtualenv-root that
 		  ;; contain a bin directory for tab-completion
 		  (dirs (remove
@@ -214,13 +213,12 @@ the virtual environment or if not a string then query the user."
 			  (lambda (d)
 			    (when (file-exists-p
 				   (expand-file-name
-				    (concat d "/bin")
+				    (concat d "/Scripts")
                                     root))
 			      d))
 			  (directory-files root nil "^[^.]"))))
 		  (result (completing-read prompt dirs nil t nil
-					   'virtualenv-workon-history
-                                           default)))
+					   'virtualenv-workon-history)))
 
 	     ;; if the user entered nothing, then return the default
 	     ;; if there is one
@@ -239,7 +237,7 @@ the virtual environment or if not a string then query the user."
 	      (kill-buffer buffer))
 	    (setq virtualenv-workon-session env)
             (let* ((bin (expand-file-name
-                         (concat env "/bin")
+                         (concat env "/Scripts")
                          virtualenv-root))
                    (oldpath (or (car virtualenv-saved-path)
                                 (getenv "PATH")))
@@ -247,7 +245,7 @@ the virtual environment or if not a string then query the user."
                                 exec-path)))
               (setq virtualenv-saved-path (cons oldpath oldexec))
               (add-to-list 'exec-path bin)
-              (setenv "PATH" (concat bin ":" oldpath)))
+              (setenv "PATH" (concat bin path-separator oldpath)))	;;chage ":" to ";" for win7 ;;change ";" to path-separator
 	    (when virtualenv-workon-starts-python
 	      (cond ((fboundp 'python-shell-switch-to-shell)
                      (python-shell-switch-to-shell))
@@ -255,8 +253,6 @@ the virtual environment or if not a string then query the user."
 		     (py-shell))
 		    ((fboundp 'python-shell)
 		     (python-shell))
-		    ((fboundp 'run-python)
-		     (run-python))
 		    (t (error "Could not start a python shell!"))))
 	    (message (format "Now using virtualenv: %s" env)))
 	(message "Not changing virtualenv")))))
@@ -296,8 +292,7 @@ the virtual environment or if not a string then query the user."
 ;; adding defadvice to py-shell and python-shell.
 (dolist (list '((python-shell-switch-to-shell . "python")
                 (py-shell . "python-mode")
-		(python-shell . "python")
-		(run-python . "python")))
+		(python-shell . "python")))
   (let* ((func (car list))
 	 (file (cdr list))
 	 (doc (format "Set the environment with virtualenv before running %s." func)))
@@ -316,7 +311,7 @@ the virtual environment or if not a string then query the user."
 	     (let* ((activate (expand-file-name
 			       "activate"
 			       (expand-file-name
-                                (concat workon "/bin")
+                                (concat workon "/Scripts")
                                 virtualenv-root)))
 		    (process-environment
 		     (when (file-exists-p activate)
@@ -324,7 +319,7 @@ the virtual environment or if not a string then query the user."
 			(shell-command-to-string
 			 (format "source %s; (cd %s && env)"
 				 activate default-directory))
-			"\n")))
+			"\n")))	;;change "\n" to ";" for win7
 		    (exec-path (split-string (getenv "PATH") path-separator)))
 	       ad-do-it
 	       (hack-local-variables)
@@ -411,5 +406,3 @@ and `file-local-variables-alist', without applying them."
      (add-hook 'dired-mode-hook 'virtualenv-minor-mode-on t)))
 
 (provide 'virtualenv)
-
-;;; virtualenv.el ends here
