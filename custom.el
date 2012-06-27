@@ -84,13 +84,13 @@
 ;---------------
 ;hideshow-code
 ;---------------
-;(require 'init-hideshow-org)
+(require 'init-hideshow-org)
 
 
 ;---------------
 ;py-hideshow-mode
 ;---------------
-(require 'init-py-hideshow)
+;(require 'init-py-hideshow)
 
 ;----------
 ;字体
