@@ -11,10 +11,9 @@
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/sunrise-commander"))
 (add-to-list 'load-path (expand-file-name "~/.vtenvs"))
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/hideshow-org"))
-;(add-to-list 'load-path "~/zzcfg.d/")
-;(add-to-list 'load-path "~/zzcfg.d/pyide")
-;(add-to-list 'load-path "~/zzcfg.d/ergoemacs-keybindings-5.3.9")
-
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/slime"))
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/slime/contrib"))
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/slime/doc"))
 
 
 ;---------------------------------------
@@ -91,6 +90,12 @@
 ;py-hideshow-mode
 ;---------------
 ;(require 'init-py-hideshow)
+
+
+;----------------
+;my slime cfg
+;----------------
+;(require 'init-my-slime)
 
 ;----------
 ;字体
