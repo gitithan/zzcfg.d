@@ -14,6 +14,9 @@
 		  '(ccl ("C:/home/bin/ccl/wx86cl.exe") :coding-system utf-8-unix))))
 
 (require 'slime-autoloads)
+;(require 'slime)
+;(slime-setup '(slime-fancy))
+
 
 
 (provide 'init-my-slime)

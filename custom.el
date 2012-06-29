@@ -14,6 +14,10 @@
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/slime"))
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/slime/contrib"))
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/slime/doc"))
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/ecb"))
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/w3/lisp"))
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d//cscope-15.8/contrib/xcscope"))
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/doxymacs-1.8.0/no-autoconf"))
 
 
 ;---------------------------------------
@@ -95,7 +99,20 @@
 ;----------------
 ;my slime cfg
 ;----------------
-;(require 'init-my-slime)
+(require 'init-my-slime)
+
+
+;----------------
+;ecb
+;----------------
+(require 'init-my-ecb)
+
+
+;-----------------
+;init-my-doxymacs
+;-----------------
+(require 'init-doxymacs)
+
 
 ;----------
 ;字体

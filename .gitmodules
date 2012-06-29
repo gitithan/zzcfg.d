@@ -1,0 +1,6 @@
+[submodule "w3"]
+	path = w3
+	url = git://git.sv.gnu.org/w3.git
+[submodule "ecb"]
+	path = ecb
+	url = https://github.com/emacsmirror/ecb.git
