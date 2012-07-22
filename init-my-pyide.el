@@ -123,18 +123,18 @@
 ;----------------------
 ;autopair
 ;----------------------
-(autoload 'autopair-global-mode "autopair" nil t)
-(autopair-global-mode)
-(add-hook 'lisp-mode-hook
-          #'(lambda () (setq autopair-dont-activate t)))
-
-(add-hook 'python-mode-hook
-          #'(lambda ()
-              (push '(?' . ?')
-                    (getf autopair-extra-pairs :code))
-              (setq autopair-handle-action-fns
-                    (list #'autopair-default-handle-action
-                          #'autopair-python-triple-quote-action))))
+;(autoload 'autopair-global-mode "autopair" nil t)
+;(autopair-global-mode)
+;(add-hook 'lisp-mode-hook
+;          #'(lambda () (setq autopair-dont-activate t)))
+;
+;(add-hook 'python-mode-hook
+;          #'(lambda ()
+;              (push '(?' . ?')
+;                    (getf autopair-extra-pairs :code))
+;              (setq autopair-handle-action-fns
+;                    (list #'autopair-default-handle-action
+;                          #'autopair-python-triple-quote-action))))
 
 
 
@@ -242,6 +242,28 @@
 (set-face-background 'ac-selection-face "steelblue") ;;; 设置比上面截图中更好看的背景颜色
 (setq ac-auto-show-menu 0.8)
 (setq ac-dwim t)
+
+
+
+;----------------
+;test for yasnippet-ac-indet
+;---------------
+;;;Ryan's python specific tab completion                                                                        
+(defun ryan-python-tab ()
+  ; Try the following:                                                                                         
+  ; 1) Do a yasnippet expansion                                                                                
+  ; 2) Do a Rope code completion                                                                               
+  ; 3) Do an indent                                                                                            
+  (interactive)
+  (if (eql (ac-start) 0)
+      (indent-for-tab-command)))
+
+(defadvice ac-start (before advice-turn-on-auto-start activate)
+  (set (make-local-variable 'ac-auto-start) t))
+(defadvice ac-cleanup (after advice-turn-off-auto-start activate)
+  (set (make-local-variable 'ac-auto-start) nil))
+
+(define-key py-mode-map "\t" 'ryan-python-tab)
 
 
 (provide 'init-my-pyide)

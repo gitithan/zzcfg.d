@@ -12,25 +12,25 @@
 
 
 
-;----------------
-;test for yasnippet-ac-indet
-;---------------
-;;;Ryan's python specific tab completion                                                                        
-(defun ryan-python-tab ()
-  ; Try the following:                                                                                         
-  ; 1) Do a yasnippet expansion                                                                                
-  ; 2) Do a Rope code completion                                                                               
-  ; 3) Do an indent                                                                                            
-  (interactive)
-  (if (eql (ac-start) 0)
-      (indent-for-tab-command)))
-
-(defadvice ac-start (before advice-turn-on-auto-start activate)
-  (set (make-local-variable 'ac-auto-start) t))
-(defadvice ac-cleanup (after advice-turn-off-auto-start activate)
-  (set (make-local-variable 'ac-auto-start) nil))
-
-(define-key py-mode-map "\t" 'ryan-python-tab)
+;;----------------
+;;test for yasnippet-ac-indet
+;;---------------
+;;;;Ryan's python specific tab completion                                                                        
+;(defun ryan-python-tab ()
+;  ; Try the following:                                                                                         
+;  ; 1) Do a yasnippet expansion                                                                                
+;  ; 2) Do a Rope code completion                                                                               
+;  ; 3) Do an indent                                                                                            
+;  (interactive)
+;  (if (eql (ac-start) 0)
+;      (indent-for-tab-command)))
+;
+;(defadvice ac-start (before advice-turn-on-auto-start activate)
+;  (set (make-local-variable 'ac-auto-start) t))
+;(defadvice ac-cleanup (after advice-turn-off-auto-start activate)
+;  (set (make-local-variable 'ac-auto-start) nil))
+;
+;(define-key py-mode-map "\t" 'ryan-python-tab)
 
 
 ;------------------------------------------------------
@@ -113,22 +113,23 @@
 ;(define-key php-mode-map (kbd "C-h C-k") 'chm-keyword-lookup-php )
 
 
-;;python
-(defun chm-keyword-lookup-py ()
-   (interactive)
-   (chm-keyword-lookup "PYTHON" "C:/Python27/Doc/python273.chm")
-)
 
-(define-key py-mode-map (kbd "C-h C-k") 'chm-keyword-lookup-py )
-
-
-;;scrapy
-(defun chm-keyword-lookup-scrapy ()
-   (interactive)
-   (chm-keyword-lookup "Scrapy" "E:/Python programming books/scrapy0.14.doc.chm")
-)
-
-(define-key py-mode-map (kbd "C-h C-o") 'chm-keyword-lookup-scrapy )
+;;;python
+;(defun chm-keyword-lookup-py ()
+;   (interactive)
+;   (chm-keyword-lookup "PYTHON" "C:/Python27/Doc/python273.chm")
+;)
+;
+;(define-key py-mode-map (kbd "C-h C-k") 'chm-keyword-lookup-py )
+;
+;
+;;;scrapy
+;(defun chm-keyword-lookup-scrapy ()
+;   (interactive)
+;   (chm-keyword-lookup "Scrapy" "E:/Python programming books/scrapy0.14.doc.chm")
+;)
+;
+;(define-key py-mode-map (kbd "C-h C-o") 'chm-keyword-lookup-scrapy )
 
 
 ;----------
@@ -147,5 +148,31 @@
 ;;;;(global-set-key (kbd "C-M-o") 'my-multi-occur-in-matching-buffers)
 (global-set-key (kbd "C-8") 'my-multi-occur-in-matching-buffers)
 
+
+;-------------------
+;slime auto-pair bug
+;-------------------
+;(add-hook 'slime-repl-mode-hook
+;          #'(lambda ()
+;              (setq autopair-dont-activate t)))
+
+(add-hook 'repl-mode-hook
+           #'(lambda () 
+               (setq autopair-dont-activate t) ;; for emacsen < 24
+               (autopair-mode -1))             ;; for emacsen >= 24
+)
+
+
+;(set-default 'autopair-dont-activate #'(lambda ()
+;			(eq major-mode 'slime-repl-mode)))
+
+
+
+
+;------------------
+;lambda clojure-mode
+;------------------
+(add-hook 'slime-connected-hook (lambda () 
+                                  (require 'clojure-mode))) 
 
 (provide 'init-test)
