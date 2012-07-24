@@ -120,6 +120,18 @@
 ;----------------
 ;;(require 'my-init-fuzzy)
 
+
+;----------------
+;little tips
+;----------------
+(require 'little-tips)
+
+
+;----------------
+;binchen-yasnippet
+;-----------------
+(require 'binchen-yasnippet)
+
 ;----------
 ;字体
 ;----------
