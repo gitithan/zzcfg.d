@@ -18,7 +18,6 @@
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/w3/lisp"))
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d//cscope-15.8/contrib/xcscope"))
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/doxymacs-1.8.0/no-autoconf"))
-(add-to-list 'load-path (expand-file-name "~/zzcfg.d/csslint/release"))
 
 
 
