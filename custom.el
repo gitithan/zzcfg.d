@@ -21,6 +21,7 @@
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/csslint/release"))
 
 
+
 ;---------------------------------------
 ;Identify coding (language) automatically
 ;----------------------------------------
@@ -131,6 +132,24 @@
 ;binchen-yasnippet
 ;-----------------
 (require 'binchen-yasnippet)
+
+
+;-----------------
+;icomplete+
+;-----------------
+(require 'my-init-icompleteplus)
+
+
+;--------------
+;bmz-outline-orglike
+;--------------
+;;(require 'bmz-outline-orglike)
+
+
+;-----------------
+;my ruby cfg
+;-----------------
+;;(require 'init-my-ruby)
 
 ;----------
 ;字体
