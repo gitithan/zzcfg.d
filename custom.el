@@ -18,6 +18,14 @@
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/w3/lisp"))
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d//cscope-15.8/contrib/xcscope"))
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/doxymacs-1.8.0/no-autoconf"))
+;(add-to-list 'load-path (expand-file-name "~/zzcfg.d/rcodetools"))
+;----------- pry of ruby -------------
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/pry"))
+;(add-to-list 'load-path (expand-file-name "~/zzcfg.d/Enhanced_Ruby_Mode"))
+;(setq enh-ruby-program "C:/Ruby193/bin/ruby") ; so that still works if ruby points to ruby1.8
+;------------ Rsense -----------------
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/rsense-0.3/etc"))
+
 
 
 
@@ -149,6 +157,47 @@
 ;my ruby cfg
 ;-----------------
 ;;(require 'init-my-ruby)
+
+
+;-----------------
+;rcodetools
+;-----------------
+;(require 'auto-complete-ruby)
+
+
+;---------------
+;init-my-irb
+;---------------
+(require 'init-my-irb)
+
+
+;-------------
+;init-my-pry
+;-------------
+(require 'init-my-pry)
+
+
+;--------------
+;init-my-ehc_ruby_mode
+;--------------
+;(require 'init-my-ehc_ruby_mode)
+
+
+;---------------
+;flymake: goto
+;---------------
+(require 'init-flymake-kbd)
+
+
+;---------------
+;init-my-rsense
+;---------------
+(require 'init-my-rsense)
+
+;-----------
+;my-kbd
+;-----------
+(require 'init-my-kbd)
 
 ;----------
 ;字体

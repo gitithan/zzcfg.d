@@ -1,0 +1,1 @@
+ruby E:\soft\editor\emacs-24.0.93\config\zzcfg.d\rsense-0.3\bin\rsense server
