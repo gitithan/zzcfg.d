@@ -36,5 +36,4 @@
 
 (define-key ruby-mode-map "\t" 'ryan-ruby-tab)
 
-
 (provide 'init-my-rsense)
