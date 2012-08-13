@@ -20,13 +20,25 @@
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/doxymacs-1.8.0/no-autoconf"))
 ;(add-to-list 'load-path (expand-file-name "~/zzcfg.d/rcodetools"))
 ;----------- pry of ruby -------------
-(add-to-list 'load-path (expand-file-name "~/zzcfg.d/pry"))
+;(add-to-list 'load-path (expand-file-name "~/zzcfg.d/pry"))
 ;(add-to-list 'load-path (expand-file-name "~/zzcfg.d/Enhanced_Ruby_Mode"))
 ;(setq enh-ruby-program "C:/Ruby193/bin/ruby") ; so that still works if ruby points to ruby1.8
+;(setq enh-ruby-program "C:/Ruby187/bin/ruby") ; so that still works if ruby points to ruby1.8
 ;------------ Rsense -----------------
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/rsense-0.3/etc"))
-
-
+;------------ irbsh -------------
+;(add-to-list 'load-path (expand-file-name "~/zzcfg.d/irbsh-1.0.1/data/emacs/site-lisp"))
+;------------ geben -------------
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/geben-0.26"))
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/geben-0.26/tree-widget/geben"))
+;------------- my-php-mode ----------
+;(add-to-list 'load-path (expand-file-name "~/zzcfg.d/php-completion"))
+;(add-to-list 'load-path (expand-file-name "~/zzcfg.d/php-completion/php-mode-1.5.0"))
+;------------- my-init-orgmode ----------
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/my-org-addon"))
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/my-org-addon/bbdb"))
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/orgcvs/zgpg4win"))
+;;(add-to-list 'load-path (expand-file-name "~/zzcfg.d/my-org-addon/smex-20120301"))
 
 
 ;---------------------------------------
@@ -60,7 +72,7 @@
 ;------------
 ;orgmode定制
 ;------------
-(require 'init-my-orgmode)
+;;(require 'init-my-orgmode)
 
 
 ;------------
@@ -96,7 +108,7 @@
 ;---------------
 ;hideshow-code
 ;---------------
-(require 'init-hideshow-org)
+;(require 'init-hideshow-org)
 
 
 ;---------------
@@ -120,7 +132,7 @@
 ;-----------------
 ;init-my-doxymacs
 ;-----------------
-(require 'init-doxymacs)
+;(require 'init-doxymacs)
 
 
 ;----------------
@@ -174,7 +186,7 @@
 ;-------------
 ;init-my-pry
 ;-------------
-(require 'init-my-pry)
+;(require 'init-my-pry)
 
 
 ;--------------
@@ -198,6 +210,43 @@
 ;my-kbd
 ;-----------
 (require 'init-my-kbd)
+
+;------------
+;init-irb-company
+;------------
+;(require 'init-irb-company)
+
+
+;-------------
+;init-my-irbsh
+;-------------
+;(require 'init-my-irbsh)
+
+
+;------------
+;ruby-block
+;------------
+;(require 'init-ruby-block)
+
+
+;-----------
+;load geben
+;-----------
+(require 'init-my-geben)
+
+
+;------------
+;init my-php
+;------------
+;(require 'init-my-phpmode)
+;(require 'init-my-php)
+
+
+;------------
+;my-init-orgmode
+;------------
+(require 'my-init-orgmode)
+
 
 ;----------
 ;字体
