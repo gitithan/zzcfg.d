@@ -22,7 +22,7 @@
                                "~/orgcvs/codai"
 			       "~/orgcvs/codfm"
 			       "~/orgcvs/tdysys"
-			       "~/orgcvs/gnxcsys"
+			       ;"~/orgcvs/gnxcsys"
 			       "~/orgcvs/oocsys"
 			       )))
 
@@ -200,7 +200,7 @@
 	        ;;"* Tips %U\n\n\s\s%?\n %i\n" :prepend t :empty-lines 1)
 	       "* %A%?\n %i\n" :prepend t :empty-lines 1)
 
-	      ("n" "ns" entry (file+headline "~/orgcvs/gnxcsys/nsc.org" "ns-tips")
+	      ("m" "ns" entry (file+headline "~/orgcvs/gnxcsys/nsc.org" "ns-tips")
 		;;"* Tips %U\n\n\s\s%?\n %i\n" :prepend t :empty-lines 1)
 	       "* %A%?\n %i\n" :prepend t :empty-lines 1)
 
@@ -940,7 +940,7 @@ A prefix arg forces clock in of the default task."
                             ("PERSONAL" . ?P)
                             ("WORK" . ?W)
                             ("FARM" . ?F)
-                            ("ORG" . ?O)
+                            ("ORG" . ?O)	;;gtd,GTD,
                             ("NORANG" . ?N)
                             ("crypt" . ?E)
                             ("MARK" . ?M)
@@ -1125,6 +1125,8 @@ A prefix arg forces clock in of the default task."
 ;;
 ;;I have the following helper functions defined for projects which are used by agenda views.
 ;;==========================================================================================
+(require 'org-agenda)
+
 (defun bh/is-project-p ()
   "Any task with a todo keyword subtask"
   (save-restriction
@@ -2870,7 +2872,7 @@ Late deadlines first, then scheduled, then non-late deadlines"
 ;;
 ;;I set up an alarm so the Star Trek door chime goes off when the total estimated time is hit. (Yes I'm a Trekkie :) )
 ;;=-------------------------------------
-(setq org-clock-sound "~/zzcfg.d/my-org-addon/tngchime.mp3")
+(setq org-clock-sound "~/zzcfg.d/my-org-addon/message.wav")
 
 ;;When the one hour time limit is hit the alarm sound goes off and a message states that I should be done working on this task. 
 ;;If I switch tasks and try to clock in this task again I get the sound each and every time I clock in the task. This nags me to go work on something else :)
@@ -3994,6 +3996,47 @@ Late deadlines first, then scheduled, then non-late deadlines"
 ;(define-key org-capture-mode-map "\C-c\C-k" 'org-capture-kill)
 ;(define-key org-capture-mode-map "\C-c\C-w" 'org-capture-refile)
 
+
+
+
+;;org-export ical
+;;================
+;;; define categories that should be excluded
+(setq org-export-exclude-category (list "google" "private"))
+
+;;; define filter. The filter is called on each entry in the agenda.
+;;; It defines a regexp to search for two timestamps, gets the start
+;;; and end point of the entry and does a regexp search. It also
+;;; checks if the category of the entry is in an exclude list and
+;;; returns either t or nil to skip or include the entry.
+
+(defun org-mycal-export-limit ()
+  "Limit the export to items that have a date, time and a range. Also exclude certain categories."
+  (setq org-tst-regexp "<\\([0-9]\\{4\\}-[0-9]\\{2\\}-[0-9]\\{2\\} ... [0-9]\\{2\\}:[0-9]\\{2\\}[^\r\n>]*?\
+\)>")
+  (setq org-tstr-regexp (concat org-tst-regexp "--?-?" org-tst-regexp))
+  (save-excursion
+    ; get categories
+    (setq mycategory (org-get-category))
+    ; get start and end of tree
+    (org-back-to-heading t)
+    (setq mystart    (point))
+    (org-end-of-subtree)
+    (setq myend      (point))
+    (goto-char mystart)
+    ; search for timerange
+    (setq myresult (re-search-forward org-tstr-regexp myend t))
+    ; search for categories to exclude
+    (setq mycatp (member mycategory org-export-exclude-category))
+    ; return t if ok, nil when not ok
+    (if (and myresult (not mycatp)) t nil)))
+
+;;; activate filter and call export function
+(defun org-mycal-export () 
+  (let ((org-icalendar-verify-function 'org-mycal-export-limit))
+    (org-export-icalendar-combine-agenda-files)))
+
+(setq org-icalendar-use-scheduled '(todo-start event-if-todo))
 
 
 

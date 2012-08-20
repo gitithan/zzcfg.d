@@ -6,7 +6,8 @@
 (scroll-bar-mode -1)	;;from nil to -1
 (tool-bar-mode 0)
 (menu-bar-mode 0)
-(global-set-key [f11] 'menu-bar-mode)
+;;(global-set-key [f11] 'menu-bar-mode)
+(global-set-key (kbd "M-<f11>") 'menu-bar-mode)
 
 ;;setting line-space
 (setq-default line-spacing 3)

@@ -48,7 +48,8 @@
       (setq my-full-screen-var t))))
  
 ;;(global-set-key [M-RET] 'toggle-fullscreen)
-(global-set-key (kbd "M-RET") 'toggle-fullscreen)
+;;(global-set-key (kbd "M-RET") 'toggle-fullscreen)
+(global-set-key (kbd "M-<f12>") 'toggle-fullscreen)
 
 ;-------------------------------------------------------
 
@@ -168,11 +169,36 @@
 
 
 
-
 ;------------------
 ;lambda clojure-mode
 ;------------------
 (add-hook 'slime-connected-hook (lambda () 
                                   (require 'clojure-mode))) 
+
+
+
+;-----------------
+;emacs-quickrun
+;-----------------
+(require 'quickrun)
+
+
+
+;------------------
+;server test ;;相当有成就感，自己改的elisp程序段，且成功了！
+;------------------
+(require 'server)
+
+;;(when (and (eq window-system 'w32) (file-exists-p (getenv "APPDATA")))
+;;  (setq server-auth-dir (concat (getenv "APPDATA") "\\.emacs.d\\server"))
+;;  (make-directory server-auth-dir)  )
+
+(when (and (eq window-system 'w32) (file-exists-p (getenv "APPDATA")))
+	(if (not (file-exists-p (concat (getenv "APPDATA") "\\.emacs.d\\server")))
+		(make-directory (concat (getenv "APPDATA") "\\.emacs.d\\server")))
+	(setq server-auth-dir (concat (getenv "APPDATA") "\\.emacs.d\\server")))
+
+(server-start)
+
 
 (provide 'init-test)

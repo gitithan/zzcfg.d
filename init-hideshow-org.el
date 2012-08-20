@@ -4,7 +4,8 @@
             'lisp-mode-hook
             'perl-mode-hook
 	    'python-mode-hook
-            'sh-mode-hook))
+            'sh-mode-hook
+	    ))
   (add-hook hook 'my-hideshow-hook))
 
 (defun my-hideshow-hook ()
