@@ -39,6 +39,12 @@
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/my-org-addon/bbdb"))
 (add-to-list 'load-path (expand-file-name "~/zzcfg.d/orgcvs/zgpg4win"))
 ;;(add-to-list 'load-path (expand-file-name "~/zzcfg.d/my-org-addon/smex-20120301"))
+;------------- lua-mode --------------
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/lua-mode"))
+;------------- emacs-quickrun -------------
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/emacs-quickrun"))
+;-------------- init-org-sync -------------------------------
+(add-to-list 'load-path (expand-file-name "~/zzcfg.d/org-sync"))
 
 
 ;---------------------------------------
@@ -239,13 +245,45 @@
 ;init my-php
 ;------------
 ;(require 'init-my-phpmode)
-;(require 'init-my-php)
+(require 'init-my-php)
+
+
+
+;-------------
+;lua-mode
+;-------------
+(require 'init-my-luamode)
+
+
+
+;------------
+;init-man-html
+;------------
+(require 'init-man-html)
 
 
 ;------------
 ;my-init-orgmode
 ;------------
 (require 'my-init-orgmode)
+
+
+;-------------------
+;init-my-pomodoro
+;-------------------
+(require 'init-my-pomodoro)
+
+
+;-------------------
+;init-kanban
+;-------------------
+(require 'kanban)
+
+
+;------------
+;my org-sync
+;------------
+(require 'init-my-orgsync)
 
 
 ;----------

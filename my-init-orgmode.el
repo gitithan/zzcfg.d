@@ -1,6 +1,9 @@
 ;--------------
 ;org-mode setup
 ;--------------
+;;define org-lisp dir
+;;===================
+
 ;;;
 ;;; Org Mode
 ;;;
@@ -23,7 +26,7 @@
 			       "~/orgcvs/codfm"
 			       "~/orgcvs/tdysys"
 			       ;"~/orgcvs/gnxcsys"
-			       "~/orgcvs/oocsys"
+			       "~/orgcvs/oocsys/refile.org"
 			       )))
 
 
@@ -185,7 +188,10 @@
               ("j" "Journal" entry (file+datetree "~/ogcvs/oocsys/diary.org")
                "* %?\n%U\n" :clock-in t :clock-resume t)
 
-              ("w" "org-protocol" entry (file "~/orgcvs/oocsys/refile.org")
+              ("w" "org-protocol to refile" entry (file "~/orgcvs/oocsys/refile.org")
+               "* TODO Review %c\n%U\n" :immediate-finish t)
+
+              ("e" "org-protocol for bookmarks" entry (file "~/orgcvs/orgbkmk.org")
                "* TODO Review %c\n%U\n" :immediate-finish t)
 
               ("p" "Phone call" entry (file "~/orgcvs/oocsys/refile.org")
