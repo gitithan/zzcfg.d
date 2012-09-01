@@ -4,3 +4,6 @@
 [submodule "ecb"]
 	path = ecb
 	url = https://github.com/emacsmirror/ecb.git
+[submodule "git-emacs"]
+	path = git-emacs
+	url = git://github.com/tsgates/git-emacs.git
