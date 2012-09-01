@@ -7,3 +7,6 @@
 [submodule "git-emacs"]
 	path = git-emacs
 	url = git://github.com/tsgates/git-emacs.git
+[submodule "org-sync"]
+	path = org-sync
+	url = git://github.com/emacsmirror/org-sync.git
