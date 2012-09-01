@@ -4,9 +4,6 @@
 [submodule "org-sync"]
 	path = org-sync
 	url = git://github.com/emacsmirror/org-sync.git
-[submodule "w3"]
-	path = w3
-	url = git://git.sv.gnu.org/w3.git
 [submodule "emacs-quickrun"]
 	path = emacs-quickrun
 	url = git://github.com/syohex/emacs-quickrun.git
