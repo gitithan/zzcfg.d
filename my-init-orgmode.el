@@ -35,7 +35,7 @@
 ;-----------------
 ;; Custom Key Bindings
 (global-set-key (kbd "<f9> a") 'org-agenda)			;show agenda items
-(global-set-key (kbd "<f5>") 'bh/org-todo)			;show todo items of only this subtree
+(global-set-key (kbd "<f6>") 'bh/org-todo)			;show todo items of only this subtree
 (global-set-key (kbd "<S-f5>") 'bh/widen)			;widen
 (global-set-key (kbd "<f7>") 'bh/set-truncate-lines)		;开关：自动折行
 (global-set-key (kbd "<f10>") 'org-cycle-agenda-files)		;goto next file in agenda files
@@ -4050,6 +4050,31 @@ Late deadlines first, then scheduled, then non-late deadlines"
 ;; Warning Warning: ad-Orig-kill-region called with 3 arguments, but accepts only 2
 ;;=------------------------------------
 (ad-deactivate 'kill-region)
+
+
+
+
+;----------------
+;test for yasnippet-ac-indet
+;---------------
+;;;Ryan's org specific tab completion                                                                        
+(defun ryan-org-tab ()
+  ; Try the following:                                                                                         
+  ; 1) Do a yasnippet expansion                                                                                
+  ; 2) Do a Rope code completion                                                                               
+  ; 3) Do an indent                                                                                            
+  (interactive)
+  (if (eql (ac-start) 0)
+      (indent-for-tab-command)))
+
+(defadvice ac-start (before advice-turn-on-auto-start activate)
+  (set (make-local-variable 'ac-auto-start) t))
+(defadvice ac-cleanup (after advice-turn-off-auto-start activate)
+  (set (make-local-variable 'ac-auto-start) nil))
+
+(define-key org-mode-map "\t" 'ryan-org-tab)
+;;(org-defkey org-mode-map "\t" 'ryan-org-tab)
+
 
 
 (provide 'my-init-orgmode)

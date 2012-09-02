@@ -1,0 +1,28 @@
+;; Set up org-mode
+;; This set up is based on http://doc.norang.ca/org-mode.html
+;; "Org Mode - Organize Your Life In Plain Text!" by Bernt Hansen,
+;; with time stamp: 2012-06-06T22:30-0400
+(require 'org-install)
+(require 'org-habit)
+(load-file "~/zzcfg.d/myorgpkgs/basic")
+(load-file "~/zzcfg.d/myorgpkgs/agenda")
+(load-file "~/zzcfg.d/myorgpkgs/narrow")
+(load-file "~/zzcfg.d/myorgpkgs/archiving")
+(load-file "~/zzcfg.d/myorgpkgs/diary")
+(load-file "~/zzcfg.d/myorgpkgs/meeting_notes")
+(load-file "~/zzcfg.d/myorgpkgs/capture")
+;; Note: Some IDO settings are in refile.el
+(load-file "~/zzcfg.d/myorgpkgs/refile")
+;; Note: Some keyword colors are set in todo.el
+(load-file "~/zzcfg.d/myorgpkgs/todo")
+(load-file "~/zzcfg.d/myorgpkgs/time_clocking")
+(load-file "~/zzcfg.d/myorgpkgs/visibility")
+(load-file "~/zzcfg.d/myorgpkgs/scratch")
+(load-file "~/zzcfg.d/myorgpkgs/babel")
+(load-file "~/zzcfg.d/myorgpkgs/publish")
+(load-file "~/zzcfg.d/myorgpkgs/speed_commands")
+(load-file "~/zzcfg.d/myorgpkgs/key_bindings")
+(load-file "~/zzcfg.d/myorgpkgs/cosmetic")
+(load-file "~/zzcfg.d/myorgpkgs/orgaddon")
+
+(provide 'autoloadorg)

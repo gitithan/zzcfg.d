@@ -185,7 +185,7 @@
 
 
 ;------------------
-;server test ;;相当有成就感，自己改的elisp程序段，且成功了！
+;server test ;;
 ;------------------
 (require 'server)
 
