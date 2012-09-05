@@ -56,5 +56,8 @@
 	       "* %A%?\n %i\n" :prepend t :empty-lines 1)
 
 
-              ("h" "Habit" entry (file "~/orgcvs/oocsys/refile.org")
+;;-slfm-;;              ("h" "Habit" entry (file "~/orgcvs/oocsys/refile.org")
+;;-slfm-;;               "* NEXT %?\n%U\n%a\nSCHEDULED: %t .+1d/3d\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n  %i"))))
+
+	      ("h" "Habit" entry (file "~/orgcvs/oocsys/refile.org")
                "* NEXT %?\n%U\n%a\nSCHEDULED: %t .+1d/3d\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))

@@ -174,8 +174,7 @@ Late deadlines first, then scheduled, then non-late deadlines"
                        (org-tags-match-list-sublevels nil)))
                 (tags-todo "-CANCELLED/!"
                            ((org-agenda-overriding-header "Stuck Projects")
-                            (org-agenda-skip-function
-                             'bh/skip-non-stuck-projects)))
+                            (org-agenda-skip-function 'bh/skip-non-stuck-projects)))	;;remove blank space or tab space
                 (tags-todo "-WAITING-CANCELLED/!NEXT"
                            ((org-agenda-overriding-header "Next Tasks")
                             (org-agenda-skip-function

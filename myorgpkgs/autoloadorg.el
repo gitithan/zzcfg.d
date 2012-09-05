@@ -25,4 +25,9 @@
 (load-file "~/zzcfg.d/myorgpkgs/cosmetic.el")
 (load-file "~/zzcfg.d/myorgpkgs/orgaddon.el")
 
+;; new patch
+(require 'org-agenda)
+(require 'org-checklist)
+
+
 (provide 'autoloadorg)

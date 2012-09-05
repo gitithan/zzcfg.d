@@ -48,10 +48,9 @@
 
 ;;slfm
 ;;============================================
-;;(require 'smex)
-;;(smex-initialize)
+(require 'smex)
+(smex-initialize)
 
-;;(global-set-key (kbd "M-x") 'smex)
 (global-set-key (kbd "M-a") 'smex)
 (global-set-key (kbd "C-x x") 'smex)
 (global-set-key (kbd "M-X") 'smex-major-mode-commands)
