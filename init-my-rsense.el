@@ -1,7 +1,7 @@
 ;; Example for Windows
 ;; (setq rsense-home "C:\\rsense-0.2")
 ;(setq rsense-home "$RSENSE_HOME")
-(setq rsense-home "E:\\soft\\editor\\emacs-24.0.93\\config\\zzcfg.d\\rsense-0.3")
+(setq rsense-home "E:\\soft\\editor\\emacs\\config\\zzcfg.d\\rsense-0.3")
 (add-to-list 'load-path (concat rsense-home "/etc"))
 (require 'rsense)
 

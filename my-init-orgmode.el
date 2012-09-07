@@ -1705,7 +1705,7 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 
 ;;; experimenting with docbook exports - not finished
 ;;(setq org-export-docbook-xsl-fo-proc-command "fop %s %s")
-;;(setq org-export-docbook-xslt-proc-command "xsltproc --output %s E:/soft/editor/emacsPortable/emacs-24.0.93/config/zzcfg.d/my-org-addon/docbook-xsl-1.77.1/fo/docbook.xsl %s")
+;;(setq org-export-docbook-xslt-proc-command "xsltproc --output %s E:/soft/editor/emacsPortable/emacs/config/zzcfg.d/my-org-addon/docbook-xsl-1.77.1/fo/docbook.xsl %s")
 ;;;
 ;;; Inline images in HTML instead of producting links to the image
 ;;(setq org-export-html-inline-images t)
