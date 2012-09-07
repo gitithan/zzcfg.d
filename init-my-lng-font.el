@@ -92,6 +92,13 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
  '("雅黑宋体" "Consolas" "Monaco" "DejaVu Sans Mono" "Monospace" "Courier New") ":pixelsize=15"
  '("雅黑宋体" "Yahei Mono" "Microsoft Yahei" "文泉驿等宽微米黑" "黑体" "新宋体" "宋体")15)
 
+;;Origin 16, 表格内容对齐性好，但表格内容与标题列不对齐, 新宋体15号本身对齐很好。
+;; Microsoft YaHie Monotype 程序员专用等宽字体： 和雅黑宋体效果一样。
+;; YaHei Consolas Hybird 不对齐
+;; "Consolas" "Monaco" "DejaVu Sans Mono" "Monospace" "Courier New"
+;; "Consolas" "Monaco" "Microsoft YaHie Monotype" "DejaVu Sans Mono" "Monospace" "Courier New"
+;; "Inconsolata" "Monaco" "DejaVu Sans Mono" "Monospace" "Courier New"
+
 ;; For Windows用 Ctrl 加上鼠标滚轮操作来调整字体大小
 (global-set-key (kbd "<C-wheel-up>") 'text-scale-increase)
 (global-set-key (kbd "<C-wheel-down>") 'text-scale-decrease)
