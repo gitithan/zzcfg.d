@@ -44,7 +44,7 @@
     t))
 
 ;;func2-按顺序找到一个字体列表（list）中第一个已经安装可用的字体
-(defvar font-list '("Microsoft YaHie Monotype" "Yahei Mono" "Microsoft Yahei" "文泉驿等宽微米黑" "黑体" "新宋体" "宋体"))
+(defvar font-list '("雅黑宋体" "Yahei Mono" "Microsoft Yahei" "文泉驿等宽微米黑" "黑体" "新宋体" "宋体"))
 (require 'cl) ;; find-if is in common list package
 (find-if #'qiang-font-existsp font-list)
 
@@ -89,9 +89,10 @@ If set/leave chinese-font-size to nil, it will follow english-font-size"
 ;;利用func4-这个函数，Emacs 字体设置就是小菜一碟了这样设置，Emacs 会优先选用 Consolas + “雅黑”的组合。
 ;;如果“雅黑”没有装的话，就使用“文泉驿等宽微米黑”，依此类推。这份字体配置不用改动就能在不同的操作系统字体环境下面使用
 (qiang-set-font
- '("Inconsolata" "Monaco" "DejaVu Sans Mono" "Monospace" "Courier New") ":pixelsize=14"
- '("Microsoft YaHie Monotype" "Yahei Mono" "Microsoft Yahei" "文泉驿等宽微米黑" "黑体" "新宋体" "宋体")15)	;;Origin 16, 表格内容对齐性好，但表格内容与标题列不对齐, 新宋体15号本身对齐很好。
+ '("雅黑宋体" "Consolas" "Monaco" "DejaVu Sans Mono" "Monospace" "Courier New") ":pixelsize=16"
+ '("雅黑宋体" "Yahei Mono" "Microsoft Yahei" "文泉驿等宽微米黑" "黑体" "新宋体" "宋体")16)
 
+;;Origin 16, 表格内容对齐性好，但表格内容与标题列不对齐, 新宋体15号本身对齐很好。
 ;; Microsoft YaHie Monotype 程序员专用等宽字体： 和雅黑宋体效果一样。
 ;; YaHei Consolas Hybird 不对齐
 ;; "Consolas" "Monaco" "DejaVu Sans Mono" "Monospace" "Courier New"
