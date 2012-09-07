@@ -1,6 +1,6 @@
 @echo off
 
-set FALLBACKEMACSDIR=E:\soft\editor\emacs-24.0.93
+set FALLBACKEMACSDIR=E:\soft\editor\emacs
 
 REM This allows the user to specify the emacs root on the command
 REM line.
