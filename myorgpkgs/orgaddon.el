@@ -623,5 +623,58 @@
 
 
 
+;;make sure Done items are strikethrough
+;;======================================
+(setq org-fontify-done-headline t)
+(custom-set-faces
+ '(org-done ((t (:foreground "grey" :weight normal :strike-through t))))
+ '(org-headline-done ((t (:foreground "grey" :strike-through t))))
+ '(org-agenda-done ((t (:foreground "grey" :weight normal :strike-through t))))
+ )
+
+
+
+
+;;Propagate STARTED To Parent Tasks
+;;==================================
+;;I used to have a STARTED and NEXT task state. These were basically the same except STARTED indicated that I've clocked some time on the task. 
+;;Since then I've just moved to using NEXT for this.
+;;
+;;The following code used to propagate the STARTED task up the project tree but I don't use this anymore.
+;;
+;;When a task is marked STARTED (either manually or by clocking it in)
+;;
+;;the STARTED state propagates up the tree to any parent tasks of this task that are TODO or NEXT. 
+;;
+;;As soon as I work on the first NEXT task in a tree the project is also marked STARTED. This helps me keep track of things that are in progress.
+;;
+;;Here's the setup I use to propagate STARTED to parent tasks:
+;;
+;;;; Mark parent tasks as started
+(defvar bh/mark-parent-tasks-started nil)
+
+(defun bh/mark-parent-tasks-started ()
+  "Visit each parent task and change TODO states to STARTED"
+  (unless bh/mark-parent-tasks-started
+    (when (equal org-state "STARTED")
+      (let ((bh/mark-parent-tasks-started t))
+        (save-excursion
+          (while (org-up-heading-safe)
+            (when (member (nth 2 (org-heading-components)) (list "TODO" "NEXT"))
+              (org-todo "STARTED"))))))))
+
+(add-hook 'org-after-todo-state-change-hook 'bh/mark-parent-tasks-started 'append)
+
+
+
+;;-- slfm org-agenda cmds --
+;;===========================
+;; Redefine "c" key in agenda to reschedule. "w" to refile
+(add-hook 'org-agenda-mode-hook '(lambda () 
+	(define-key org-agenda-mode-map "c" 'org-agenda-schedule) 
+	;; Use 'w¡¯ to refile stuph (you can still use v-w to go to week mode)
+	(define-key org-agenda-mode-map "w" 'org-agenda-refile) 
+))
+
 
 (provide 'orgaddon)
