@@ -24,3 +24,12 @@
   (not (member (nth 2 (org-heading-components)) org-done-keywords)))
 
 (setq org-refile-target-verify-function 'bh/verify-refile-target)
+
+
+;;------ slfm -------
+;; re-file-to-which-they-should-go-to
+(custom-set-variables
+'(org-refile-targets 
+  (quote 
+   (("~/orgcvs/gtdsys/org.org" :maxlevel . 1)("~/orgcvs/codai/git.org" :maxlevel . 1) ("~/orgcvs/codai/redmine.org" :maxlevel . 1))
+)))
