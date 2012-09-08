@@ -42,6 +42,9 @@
               ("p" "Phone call" entry (file "~/orgcvs/oocsys/refile.org")
                "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
 
+	      ("s" "org-protocol to refile" entry (file "~/orgcvs/oocsys/gfw.org")
+               "* TODO Review %c\n%U\n" :immediate-finish t)
+
 
 	      ("x" "xs" entry (file+headline "~/orgcvs/gnxcsys/xsc.org" "xs-tips")
 		;;"* Tips %U\n\n\s\s%?\n %i\n" :prepend t :empty-lines 1)
@@ -54,7 +57,6 @@
 	      ("m" "ns" entry (file+headline "~/orgcvs/gnxcsys/nsc.org" "ns-tips")
 		;;"* Tips %U\n\n\s\s%?\n %i\n" :prepend t :empty-lines 1)
 	       "* %A%?\n %i\n" :prepend t :empty-lines 1)
-
 
 ;;-slfm-;;              ("h" "Habit" entry (file "~/orgcvs/oocsys/refile.org")
 ;;-slfm-;;               "* NEXT %?\n%U\n%a\nSCHEDULED: %t .+1d/3d\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n  %i"))))
