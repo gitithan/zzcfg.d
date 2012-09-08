@@ -1,11 +1,11 @@
 ;; Configuration for org-mode agenda.
 (setq org-agenda-files (quote (
+			       "~/orgcvs/oocsys"
                                "~/orgcvs/gtdsys"
                                "~/orgcvs/codai"
 			       "~/orgcvs/codfm"
 			       "~/orgcvs/tdysys"
 			       ;"~/orgcvs/gnxcsys"
-			       "~/orgcvs/oocsys/refile.org"
 			       )))
 
 
