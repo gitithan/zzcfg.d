@@ -2,21 +2,21 @@
 ;; 编码设置 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-;;(setq default-buffer-file-coding-system 'gbk)     ;缓存文件编码
-;;(setq default-file-name-coding-system 'gbk)		  ;文件名编码
-;;(setq default-keyboard-coding-system 'gbk)		  ;键盘输入编码
-;;(setq default-process-coding-system '(gbk . gbk)) ;进程输出输入编码
-;;(setq default-sendmail-coding-system 'gbkx)		  ;发送邮件编码
-;;(setq default-terminal-coding-system 'gbk)		  ;终端编码
-;;
-;;;; GBK settings:
-;;(set-language-environment 'Chinese-gbk)
-;;(set-terminal-coding-system 'chinese-gbk)
-;;(set-selection-coding-system 'chinese-gbk)
-;;(set-keyboard-coding-system 'chinese-gbk)
-;;(set-clipboard-coding-system 'chinese-gbk)
-;;(set-buffer-file-coding-system 'chinese-gbk)
-;;(modify-coding-system-alist 'process "*" 'chinese-gbk)
+(setq default-buffer-file-coding-system 'gbk)     ;缓存文件编码
+(setq default-file-name-coding-system 'gbk)		  ;文件名编码
+(setq default-keyboard-coding-system 'gbk)		  ;键盘输入编码
+(setq default-process-coding-system '(gbk . gbk)) ;进程输出输入编码
+(setq default-sendmail-coding-system 'gbkx)		  ;发送邮件编码
+(setq default-terminal-coding-system 'gbk)		  ;终端编码
+
+;; GBK settings:
+(set-language-environment 'Chinese-gbk)
+(set-terminal-coding-system 'chinese-gbk)
+(set-selection-coding-system 'chinese-gbk)
+(set-keyboard-coding-system 'chinese-gbk)
+(set-clipboard-coding-system 'chinese-gbk)
+(set-buffer-file-coding-system 'chinese-gbk)
+(modify-coding-system-alist 'process "*" 'chinese-gbk)
 
 
 ;; UTF-8 settings
