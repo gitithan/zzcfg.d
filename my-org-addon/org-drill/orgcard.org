@@ -1,0 +1,1754 @@
+#+TITLE: Org-Mode Reference Card
+#+AUTHOR: Vikas Rawal
+#+EMAIL: vikaslists AT agrarianresearch DOT org
+#+STARTUP: hidestars
+#+OPTIONS: toc:t
+* Getting Started
+
+** [ =M-x org-info= ] | To read the on-line documentation try 		:drill:
+:PROPERTIES:
+:ID:       a9d7bd16-bc2c-49f6-9601-52fb9ad7ac6e
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Visibility Cycling
+
+** [ =TAB= ]             | rotate current subtree between states         		:drill:
+:PROPERTIES:
+:ID:       fe544661-958d-4004-b46a-67c5102f9d34
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =S-TAB= ]           | rotate entire buffer between states           		:drill:
+:PROPERTIES:
+:ID:       a32835e5-1567-45e1-be33-d289df93fce0
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-u C-u TAB= ]     | restore property-dependent startup visibility 		:drill:
+:PROPERTIES:
+:ID:       e588566e-50c3-4e3f-b50b-619225b54293
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-u C-u C-u TAB= ] | show the whole file, including drawers        		:drill:
+:PROPERTIES:
+:ID:       1ba398d9-b590-4bcf-a4b4-de8d6f55af02
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-r= ]         | reveal context around point                   		:drill:
+:PROPERTIES:
+:ID:       ddc19b93-a9a9-4d0a-b2f6-cd90dfb9cf7a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Motion
+
+** [ =C-c C-n/p= ] | next/previous heading             		:drill:
+:PROPERTIES:
+:ID:       01977a50-43d3-42a7-969e-9a5aa564220e
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-f/b= ] | next/previous heading, same level 		:drill:
+:PROPERTIES:
+:ID:       e7146dd9-b75b-46bd-ba58-8841ce40c3f5
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-u= ]   | backward to higher level heading  		:drill:
+:PROPERTIES:
+:ID:       245f473d-1757-438a-aec8-ac3dea2118da
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-j= ]   | jump to another place in document 		:drill:
+:PROPERTIES:
+:ID:       75239f31-d54e-434e-9519-9eb9a90bc9a5
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =S-UP/DOWN= ] | previous/next plain list item     		:drill:
+:PROPERTIES:
+:ID:       a31d896c-8675-4697-b27f-f7d14a5eee54
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Structure Editing
+
+** [ =M-RET= ]              | insert new heading/item at current level   		:drill:
+:PROPERTIES:
+:ID:       4be4ba26-9437-4624-93e7-625a144599e1
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-RET= ]              | insert new heading after subtree           		:drill:
+:PROPERTIES:
+:ID:       018b1a75-e4a3-4b96-bc6c-855ff55a74c8
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =M-S-RET= ]            | insert new TODO entry/checkbox item        		:drill:
+:PROPERTIES:
+:ID:       b717bd3d-8d1b-497b-b8a5-93ad427f4c82
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-S-RET= ]            | insert TODO entry/ckbx after subtree       		:drill:
+:PROPERTIES:
+:ID:       8dbe47d9-65c9-4e38-ab08-912fcc432180
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c -= ]              | turn (head)line into item, cycle item type 		:drill:
+:PROPERTIES:
+:ID:       96a0d5c7-5b3f-460a-9b57-4e315bc226e2
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c *= ]              | turn item/line into headline               		:drill:
+:PROPERTIES:
+:ID:       1ecca671-ca4f-46f3-91bd-fcebe1e04c0f
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =M-LEFT/RIGHT= ]       | promote/demote heading                     		:drill:
+:PROPERTIES:
+:ID:       096265e0-db72-4471-b29f-a3a62647e1cf
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =M-S-LEFT/RIGHT= ]     | promote/demote current subtree             		:drill:
+:PROPERTIES:
+:ID:       90a4962a-38c8-42c7-8557-1b7ad9a23603
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =M-S-UP/DOWN= ]        | move subtree/list item up/down             		:drill:
+:PROPERTIES:
+:ID:       a5163c9a-32e9-4df1-a046-c6db7310ff52
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c ^= ]              | sort subtree/region/plain-list             		:drill:
+:PROPERTIES:
+:ID:       48a2d163-bc26-4780-9bda-455d0672e561
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x c= ]          | clone a subtree                            		:drill:
+:PROPERTIES:
+:ID:       ee7c7d72-afd2-43de-817e-6eaf52bd22ec
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x v= ]          | copy visible text                          		:drill:
+:PROPERTIES:
+:ID:       25f84602-f059-40ca-966d-1e923f240a25
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x C-w/M-w= ]    | kill/copy subtree                          		:drill:
+:PROPERTIES:
+:ID:       f8e7c7f1-4e4d-4362-a298-3170d578ea57
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x C-y or C-y= ] | yank subtree                               		:drill:
+:PROPERTIES:
+:ID:       3e689242-11d1-4aa8-8f45-2f19c29daede
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-x n s/w= ]          | narrow buffer to subtree / widen           		:drill:
+:PROPERTIES:
+:ID:       a858c67d-7f39-4e43-9433-11f35a9fa73e
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Capture - Refile - Archiving
+
+** [ =C-c c= ]       | capture a new item (C-u C-u = goto last)  		:drill:
+:PROPERTIES:
+:ID:       94ad8e01-aa38-4d05-9501-2b8947001824
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-w= ]     | refile subtree (C-u C-u = goto last)      		:drill:
+:PROPERTIES:
+:ID:       112e86dc-0729-4b90-887c-7448717e8a76
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x C-a= ] | archive subtree using the default command 		:drill:
+:PROPERTIES:
+:ID:       712b15dd-4f71-436e-aa42-96bf40505335
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x C-s= ] | move subtree to archive file              		:drill:
+:PROPERTIES:
+:ID:       02afdd21-d424-46ba-be1f-002796d8d173
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x a/A= ] | toggle ARCHIVE tag / to ARCHIVE sibling   		:drill:
+:PROPERTIES:
+:ID:       f822e6e4-14da-46a7-b395-a348bafe5d92
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-TAB= ]       | force cycling of an ARCHIVEd tree         		:drill:
+:PROPERTIES:
+:ID:       f3cf86eb-b971-4371-90c3-262fa1ef5273
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Filtering and Sparse Trees
+
+** [ =C-c /= ]     | construct a sparse tree by various criteria 		:drill:
+:PROPERTIES:
+:ID:       61c08d75-ea20-4636-9bf8-41a2f6c48ab4
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c / t/T= ] | view TODO's in sparse tree                  		:drill:
+:PROPERTIES:
+:ID:       42064611-97c9-45fc-a719-b3ff5aa3c6d7
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c a t= ]   | global TODO list in agenda mode             		:drill:
+:PROPERTIES:
+:ID:       8409cb0e-acae-47ff-bfb9-911379e63e8b
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c a L= ]   | time sorted view of current org file        		:drill:
+:PROPERTIES:
+:ID:       9a15497f-4c9a-4682-9c29-59433778fc00
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Tables
+*** Creating a table
+**** [ =C-c ] |=: convert region to table                              :drill:
+:PROPERTIES:
+:ID:       acc9dacb-168b-41f1-8df6-fa66d88da087
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-3 C-c ] |= : separator at least 3 spaces                     :drill:
+:PROPERTIES:
+:ID:       f7070fb7-e3d9-415d-be81-b7f5abeb58c6
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** Commands available inside tables
+The following commands work when the cursor is inside a table.  Outside of
+tables, the same keys may have other functionality.
+*** Re-aligning and field motion
+
+**** [ =C-c C-c= ] | re-align the table without moving the cursor 		:drill:
+:PROPERTIES:
+:ID:       fe31b929-ff5f-440a-aa71-83a59e7e81f5
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =TAB= ]     | re-align the table, move to next field       		:drill:
+:PROPERTIES:
+:ID:       265b9d40-c1d6-43ba-91f4-b3db26e8265d
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =S-TAB= ]   | move to previous field                       		:drill:
+:PROPERTIES:
+:ID:       9e478a20-6e89-4977-8d98-9f338cdc90d1
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =RET= ]     | re-align the table, move to next row         		:drill:
+:PROPERTIES:
+:ID:       0af80ec9-d003-41b5-ab1e-f8cc202d2d54
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =M-a/e= ]   | move to beginning/end of field               		:drill:
+:PROPERTIES:
+:ID:       b18d35b7-fe32-470f-99a7-3fc1ef6c9431
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** Row and column editing
+
+**** [ =M-LEFT/RIGHT= ] | move the current column left                 		:drill:
+:PROPERTIES:
+:ID:       63f2c5df-0caf-4778-bfb5-998a4b0f6573
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =M-S-LEFT= ]     | kill the current column                      		:drill:
+:PROPERTIES:
+:ID:       86513bbe-d511-48bc-8d5d-f732127de61b
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =M-S-RIGHT= ]    | insert new column to left of cursor position 		:drill:
+:PROPERTIES:
+:ID:       2ab8099a-d0c6-4b1b-b57a-55dd8721813f
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =M-UP/DOWN= ]    | move the current row up/down                 		:drill:
+:PROPERTIES:
+:ID:       ca91b439-fc55-4565-9940-c1f7ac10e276
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =M-S-UP= ]       | kill the current row or horizontal line      		:drill:
+:PROPERTIES:
+:ID:       101f0c7d-4beb-427f-baf0-6fa9940b4067
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =M-S-DOWN= ]     | insert new row above the current row         		:drill:
+:PROPERTIES:
+:ID:       ce7d15d1-a751-4b22-89d4-f2b0b178dd25
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-c -= ]        | insert hline below (C-u : above) current row 		:drill:
+:PROPERTIES:
+:ID:       053575cf-ed0e-42fb-946d-49e42829a1d0
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-c RET= ]      | insert hline and move to line below it       		:drill:
+:PROPERTIES:
+:ID:       db439128-d20a-44ff-bc83-96d056e77a72
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-c ^= ]        | sort lines in region                         		:drill:
+:PROPERTIES:
+:ID:       8b714a4e-c62b-4a10-8208-0412003a6054
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** Regions
+
+**** [ =C-c C-x C-w/M-w/C-y= ] | cut/copy/paste rectangular region    		:drill:
+:PROPERTIES:
+:ID:       87bdf363-f1f0-429e-8365-08d58eca2de4
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-c C-q= ]             | fill paragraph across selected cells 		:drill:
+:PROPERTIES:
+:ID:       c3b3026f-1b75-4b45-b595-13834a54338b
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** Miscellaneous
+
+**** [ =C-c `= ]                | edit the current field in a separate window 		:drill:
+:PROPERTIES:
+:ID:       8216a8e1-e101-45f7-bf1b-edd261a7ab67
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-u TAB= ]              | make current field fully visible            		:drill:
+:PROPERTIES:
+:ID:       53c629f4-aaed-45e1-b6fb-e60abe87ca64
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =M-x org-table-export= ] | export as tab-separated file                		:drill:
+:PROPERTIES:
+:ID:       5b0b75d9-c2c8-4e06-81d3-da4c6eee99d3
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =M-x org-table-import= ] | import tab-separated file                   		:drill:
+:PROPERTIES:
+:ID:       27a48f1c-fa2c-43f7-af0b-93de67b5bca3
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-c += ]                | sum numbers in current column/rectangle     		:drill:
+:PROPERTIES:
+:ID:       6a26f705-2dff-4b41-b50e-a7c4838b0c87
+:END:
+
+:) The harder you work, The happier you are. :)
+
+To limit column width to N characters, use =... | <N> | ...=.
+** Tables created with the table.el package
+
+*** [ =C-c ~= ]   | insert a new table.el table           		:drill:
+:PROPERTIES:
+:ID:       f1c9753b-5ea4-46d7-8ed4-9f1ed9c8a19d
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c C-c= ] | recognize existing table.el table     		:drill:
+:PROPERTIES:
+:ID:       b20ae304-edbe-48d3-a96f-0886152f0866
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c ~= ]   | convert table (Org-mode <-> table.el) 		:drill:
+:PROPERTIES:
+:ID:       f3eef10c-b57d-485a-91c5-4b3734fd2741
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** Spreadsheet
+- Formulas typed in field are executed by =TAB=, =RET= and =C-c C-c=.
+- `=' introduces a column formula, `:=' a field formula.
+- Example: Add Col1 and Col2: ~=1+2~
+- ... with printf format specification: ~=1+2;%.2f~
+- ... with constants from constants.el: ~=1/c/cm~
+- sum from 2nd to 3rd hline: ~:=vsum(@II..@III)~
+
+*** [ ~=~ ]             | apply current column formula                  		:drill:
+:PROPERTIES:
+:ID:       2bc01bd3-d01e-4d77-85c7-7a93b8c39f75
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ ~C-c =~ ]         | set and eval column formula                   		:drill:
+:PROPERTIES:
+:ID:       50ad8367-299c-4963-a0e0-e30fd2f036a5
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ ~C-u C-c #~ ]     | set and eval field formula                    		:drill:
+:PROPERTIES:
+:ID:       257416e1-32c2-4d33-99b1-5bb977e79d5d
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c *= ]         | re-apply all stored equations to current line 		:drill:
+:PROPERTIES:
+:ID:       35e4445b-b82f-422c-a5f1-51d33fe63765
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-u C-c *= ]     | re-apply all stored equations to entire table 		:drill:
+:PROPERTIES:
+:ID:       6883f879-b6c5-4f41-821c-6e0ff300cd43
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-u C-u C-c *= ] | iterate table to stability                    		:drill:
+:PROPERTIES:
+:ID:       480b291f-bb1f-4650-8a38-d260532b7f9f
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-#= ]           | rotate calculation mark through # * ! ^ _     		:drill:
+:PROPERTIES:
+:ID:       aabb9581-c672-407e-ab33-8a5ded1ccd38
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c ?= ]         | show line, column, formula reference          		:drill:
+:PROPERTIES:
+:ID:       5871cb58-880c-4b7c-a623-d8b16c1c59fc
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c }/{= ]       | toggle grid / debugger                        		:drill:
+:PROPERTIES:
+:ID:       20264ac2-2570-492e-b7c5-fec01651b73d
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** Formula Editor
+
+*** [ =C-c '= ]       | edit formulas in separate buffer      		:drill:
+:PROPERTIES:
+:ID:       6765b108-e37b-4f10-aa67-9b280b4a2648
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c C-c= ]     | exit and install new formulas         		:drill:
+:PROPERTIES:
+:ID:       79a7f198-44d7-43b4-acf7-1af005432139
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-u C-c C-c= ] | exit, install, and apply new formulas 		:drill:
+:PROPERTIES:
+:ID:       d2f92274-5674-45f6-8be0-8e7d1f89f63e
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c C-q= ]     | abort                                 		:drill:
+:PROPERTIES:
+:ID:       20662ebb-cb82-4c1a-83a2-566ec2245abc
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c C-r= ]     | toggle reference style                		:drill:
+:PROPERTIES:
+:ID:       7428771b-d83c-401b-888a-b1e13c157711
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =TAB= ]         | pretty-print Lisp formula             		:drill:
+:PROPERTIES:
+:ID:       b88c37ce-b2de-40fc-84cc-d47da2b27ef2
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =M-TAB= ]       | complete Lisp symbol                  		:drill:
+:PROPERTIES:
+:ID:       b3341137-9e9a-4d60-8dcd-5a056d50e598
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =S-cursor= ]    | shift reference point                 		:drill:
+:PROPERTIES:
+:ID:       57b8c71a-5023-4ebe-99c1-8c85da1e9f0d
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =M-up/down= ]   | shift test line for column references 		:drill:
+:PROPERTIES:
+:ID:       a8abd7e0-94b7-4a98-8bcc-4d2027f11021
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =M-S-up/down= ] | scroll the window showing the table   		:drill:
+:PROPERTIES:
+:ID:       6f8807c3-7c79-486a-82c3-a208f7dc2776
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c }= ]       | toggle table coordinate grid          		:drill:
+:PROPERTIES:
+:ID:       7d91653f-3e53-400f-8fb6-65b480064727
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Links
+
+** [ =C-c l= ]       | globally store link to the current location 		:drill:
+:PROPERTIES:
+:ID:       fe643308-e260-4d69-b6d0-7b52484d3f31
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-l= ]     | insert a link (TAB completes stored links)  		:drill:
+:PROPERTIES:
+:ID:       f3f35600-07bd-4275-bd06-dd7d38fa6123
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-u C-c C-l= ] | insert file link with file name completion  		:drill:
+:PROPERTIES:
+:ID:       2d221a2d-36ea-4366-b109-eef01005b889
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-l= ]     | edit (also hidden part of) link at point    		:drill:
+:PROPERTIES:
+:ID:       d750a611-2a94-422d-8dae-bff24f634dce
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-o= ]     | open file links in emacs                    		:drill:
+:PROPERTIES:
+:ID:       0c4a8dad-be73-48ca-9079-877c95aed3eb
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-u C-c C-o= ] | ...force open in emacs/other window         		:drill:
+:PROPERTIES:
+:ID:       9605a956-1e5d-4bd8-94f5-302fc45cf846
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =mouse-1/2= ]   | open link at point                          		:drill:
+:PROPERTIES:
+:ID:       350eff25-fdd7-4050-8d96-c505ebe5de3e
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =mouse-3= ]     | ...force open in emacs/other window         		:drill:
+:PROPERTIES:
+:ID:       32ab6b24-445d-4675-915c-fdcbdd465997
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c %= ]       | record a position in mark ring              		:drill:
+:PROPERTIES:
+:ID:       96af3b47-ac31-440b-9955-8d929ea84d6a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c &= ]       | jump back to last followed link(s)          		:drill:
+:PROPERTIES:
+:ID:       69374fa6-7447-4b51-b898-a4621d04bec9
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x C-n= ] | find next link                              		:drill:
+:PROPERTIES:
+:ID:       587e378f-3389-4125-8f67-f42d185c844d
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x C-p= ] | find previous link                          		:drill:
+:PROPERTIES:
+:ID:       12f2a701-9382-487c-bbe3-1403f2b2f7af
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c '= ]       | edit code snippet of file at point          		:drill:
+:PROPERTIES:
+:ID:       4e51128e-daa6-4f66-b4bb-b3c3d67c83d4
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x C-v= ] | toggle inline display of linked images      		:drill:
+:PROPERTIES:
+:ID:       bc98138b-b2b9-43eb-b9c8-901115f798f3
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Working with Code (Babel)
+
+** [ =C-c C-c= ]   | execute code block at point                       		:drill:
+:PROPERTIES:
+:ID:       33440452-8286-47a9-a93f-575caf8512e9
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-o= ]   | open results of code block at point               		:drill:
+:PROPERTIES:
+:ID:       a1f6fdd6-c195-42bf-9cb7-c612406bf7f9
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v c= ] | check code block at point for errors              		:drill:
+:PROPERTIES:
+:ID:       57e47839-4e27-4d85-8564-78bb7e2fbb35
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v j= ] | insert a header argument with completion          		:drill:
+:PROPERTIES:
+:ID:       bfb349b6-308f-480c-b946-30510d20ad81
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v v= ] | view expanded body of code block at point         		:drill:
+:PROPERTIES:
+:ID:       b13cef82-e57e-4181-823c-c1541cee6c7a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v I= ] | view information about code block at point        		:drill:
+:PROPERTIES:
+:ID:       ea96c0d4-e7f1-495d-994f-f991a70b49fa
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v g= ] | go to named code block                            		:drill:
+:PROPERTIES:
+:ID:       01fa4154-d3ca-4da0-a924-232bca12dce2
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v r= ] | go to named result                                		:drill:
+:PROPERTIES:
+:ID:       03c9c356-5b64-4689-9f77-b8fe51d7dd75
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v u= ] | go to the head of the current code block          		:drill:
+:PROPERTIES:
+:ID:       df9708bd-d84e-41d9-825f-ae8deede5a83
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v n= ] | go to the next code block                         		:drill:
+:PROPERTIES:
+:ID:       c2d9968a-671c-4d79-ad19-354500eb1c19
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v p= ] | go to the previous code block                     		:drill:
+:PROPERTIES:
+:ID:       959277ef-5454-492d-a6cf-ba6adceab6ee
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v d= ] | demarcate a code block                            		:drill:
+:PROPERTIES:
+:ID:       fcc14cca-993c-4daf-9150-580cdc6b34e3
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v x= ] | execute the next key sequence in the code edit bu 		:drill:
+:PROPERTIES:
+:ID:       417a3c7c-8527-4144-97a5-1852583a72cc
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v b= ] | execute all code blocks in current buffer         		:drill:
+:PROPERTIES:
+:ID:       b10e59bc-d3dd-45b8-b6c3-16a84c6c7fe9
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v s= ] | execute all code blocks in current subtree        		:drill:
+:PROPERTIES:
+:ID:       8aa35976-fe29-41ff-ab65-c4b5a415db33
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v t= ] | tangle code blocks in current file                		:drill:
+:PROPERTIES:
+:ID:       876eb80d-3c6b-468c-8ef7-0ee8707642a0
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v f= ] | tangle code blocks in supplied file               		:drill:
+:PROPERTIES:
+:ID:       3c396469-1276-4fd2-b16a-be61d2618fcd
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v i= ] | ingest all code blocks in supplied file into the  		:drill:
+:PROPERTIES:
+:ID:       2633cb62-caa8-49c2-b63f-333d73a99cef
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v z= ] | switch to the session of the current code block   		:drill:
+:PROPERTIES:
+:ID:       a2925965-9fb7-49db-bc42-a0f54f968288
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v l= ] | load the current code block into a session        		:drill:
+:PROPERTIES:
+:ID:       15407866-3c67-420b-863a-91d8f63a01f7
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v a= ] | view sha1 hash of the current code block          		:drill:
+:PROPERTIES:
+:ID:       c5ac3898-27cd-4777-8445-7229de2c6eaa
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Completion
+In-buffer completion completes TODO keywords at headline start, TeX macros
+after `\', option keywords after `#-', TAGS after `:', and dictionary words
+elsewhere.
+
+** [ =M-TAB= ] | complete word at point 		:drill:
+:PROPERTIES:
+:ID:       704203d4-890f-4af8-8bb7-6132b2cb9cfb
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* TODO Items and Checkboxes
+
+** [ =C-c C-t= ]        | rotate the state of the current item          		:drill:
+:PROPERTIES:
+:ID:       7f222e6d-02da-4ea1-b898-e7ea6826858f
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =S-LEFT/RIGHT= ]   | select next/previous state                    		:drill:
+:PROPERTIES:
+:ID:       b89ffd05-0f0a-4459-be0b-e447cf42944a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-S-LEFT/RIGHT= ] | select next/previous set                      		:drill:
+:PROPERTIES:
+:ID:       7f23eb4c-2d27-4d7c-8d8e-a7fe8f50cd61
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x o= ]      | toggle ORDERED property                       		:drill:
+:PROPERTIES:
+:ID:       c4d63f67-7bb6-40f3-ba32-39c742554b4e
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-v= ]        | view TODO items in a sparse tree              		:drill:
+:PROPERTIES:
+:ID:       a09fe660-77f0-4617-aa65-17916923fbfb
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-3 C-c C-v= ]    | view 3rd TODO keyword's sparse tree           		:drill:
+:PROPERTIES:
+:ID:       7379f348-de83-4f82-bfec-30c58c96df60
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c , [ABC]= ]    | set the priority of the current item          		:drill:
+:PROPERTIES:
+:ID:       b87e10f4-d3fa-4f2a-aca8-53df92cb967b
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c , SPC= ]      | remove priority cookie from current item      		:drill:
+:PROPERTIES:
+:ID:       c3d13760-1bf5-4b98-9ead-fe153747ac22
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =S-UP/DOWN= ]      | raise/lower priority of current item          		:drill:
+:PROPERTIES:
+:ID:       b6a7b8bb-677d-4cb5-a47a-0b31d6866b9b
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =M-S-RET= ]        | insert new checkbox item in plain list        		:drill:
+:PROPERTIES:
+:ID:       1c3605ed-af19-4dee-87ef-8ee1e0971964
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x C-b= ]    | toggle checkbox(es) in region/entry/at point  		:drill:
+:PROPERTIES:
+:ID:       f49c3514-e058-4f5d-bfd3-8a3028e6c12f
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-c= ]        | toggle checkbox at point                      		:drill:
+:PROPERTIES:
+:ID:       77de1a2d-2502-481d-9a5e-86fb0aba91b0
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c #= ]          | update checkbox statistics (C-u : whole file) 		:drill:
+:PROPERTIES:
+:ID:       2c89737d-49cf-4ad8-b0d3-e0966d967a2a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Tags
+
+** [ =C-c C-q= ]     | set tags for current heading           		:drill:
+:PROPERTIES:
+:ID:       013e684c-1a5f-456a-b26a-c53ee725803d
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-u C-c C-q= ] | realign tags in all headings           		:drill:
+:PROPERTIES:
+:ID:       26922d7e-1fd1-408c-afe4-0fedbbd83130
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c \\= ]      | create sparse tree with matching tags  		:drill:
+:PROPERTIES:
+:ID:       d4493eb9-0269-44c5-b082-df404e9e46e8
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-o= ]     | globally (agenda) match tags at cursor 		:drill:
+:PROPERTIES:
+:ID:       40ae7ec5-8dad-48e2-8b08-a6294994996a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Properties and Column View
+
+** [ =C-c C-x p/e= ]           | set property/effort                   		:drill:
+:PROPERTIES:
+:ID:       7511266c-cb8c-474d-80b0-edc84e13bcb6
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-c= ]               | special commands in property lines    		:drill:
+:PROPERTIES:
+:ID:       537ee842-ec26-43ad-b30d-36dd520d18dc
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =S-left/right= ]          | next/previous allowed value           		:drill:
+:PROPERTIES:
+:ID:       5dda6c04-5523-4519-b6b5-c8d5590c7c8e
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x C-c= ]           | turn on column view                   		:drill:
+:PROPERTIES:
+:ID:       40f3ec3f-55e3-498c-80dc-e8641d71e74d
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x i= ]             | capture columns view in dynamic block 		:drill:
+:PROPERTIES:
+:ID:       b6430d1f-fc00-41da-b4c2-4323d1121fd4
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =q= ]                     | quit column view                      		:drill:
+:PROPERTIES:
+:ID:       22331d60-dc1e-44bd-ae00-716f1570e7d5
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =v= ]                     | show full value                       		:drill:
+:PROPERTIES:
+:ID:       ec1091b3-98e3-45ce-970c-accae54c18e3
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =e= ]                     | edit value                            		:drill:
+:PROPERTIES:
+:ID:       b70cebe3-4bc7-4773-bb23-e9229cb01afc
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =n/p= or =S-left/right= ] | next/previous allowed value           		:drill:
+:PROPERTIES:
+:ID:       2bc26705-4272-4c40-945f-8a87bbaad4c9
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =a= ]                     | edit allowed values list              		:drill:
+:PROPERTIES:
+:ID:       597809a6-d2a7-4602-9161-addb7af97c67
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ => / <= ]                 | make column wider/narrower            		:drill:
+:PROPERTIES:
+:ID:       e6475a04-a512-4d90-a48d-c0f628cbc210
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =M-left/right= ]          | move column left/right                		:drill:
+:PROPERTIES:
+:ID:       69bc11b4-4106-411d-87ea-da7b6583f521
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =M-S-right= ]             | add new column                        		:drill:
+:PROPERTIES:
+:ID:       2c3cc459-3404-415e-bc68-0e6447dda9fd
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =M-S-left= ]              | Delete current column                 		:drill:
+:PROPERTIES:
+:ID:       1ed5ae7e-4e29-4e23-8a75-dafb4fe6086b
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Timestamps
+
+** [ =C-c .= ]        | prompt for date and insert timestamp         		:drill:
+:PROPERTIES:
+:ID:       f8b02b91-c218-4d56-9b6a-01bbf8680b35
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-u C-c .= ]    | like C-c . but insert date and time format   		:drill:
+:PROPERTIES:
+:ID:       a6838ac7-c7db-4e8e-b777-af7fffc845b1
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c != ]        | like C-c . but make stamp inactive           		:drill:
+:PROPERTIES:
+:ID:       34b2f11b-b40b-444a-bd56-a79fa4a6e4a2
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-d= ]      | insert DEADLINE timestamp                    		:drill:
+:PROPERTIES:
+:ID:       4ba66251-2e55-4816-a009-32cfcab2e1e2
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-s= ]      | insert SCHEDULED timestamp                   		:drill:
+:PROPERTIES:
+:ID:       542745cd-9bba-42fa-8d11-a59eff65443f
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c / d= ]      | create sparse tree with all deadlines due    		:drill:
+:PROPERTIES:
+:ID:       8233c9c2-dc07-4a7d-b579-d9ca2992cebb
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-y= ]      | the time between 2 dates in a time range     		:drill:
+:PROPERTIES:
+:ID:       cc95e7f8-a98f-4fc7-9b41-39429b91732d
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =S-RIGHT/LEFT= ] | change timestamp at cursor ¡À1 day            		:drill:
+:PROPERTIES:
+:ID:       9e8a2b19-9392-43ef-8e03-3adf59476177
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =S-UP/DOWN= ]    | change year/month/day at cursor by ¡À1        		:drill:
+:PROPERTIES:
+:ID:       8a836cb0-a871-4e84-be48-e49cb2eafffd
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c >= ]        | access the calendar for the current date     		:drill:
+:PROPERTIES:
+:ID:       cd939fd5-db45-49e3-bb42-82aea308057c
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c <= ]        | insert timestamp matching date in calendar   		:drill:
+:PROPERTIES:
+:ID:       9c3ecfdc-b6f0-4f8e-84fc-01178e37e72f
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-o= ]      | access agenda for current date               		:drill:
+:PROPERTIES:
+:ID:       ccd54092-0d02-4534-a476-7a889a2ced48
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =mouse-1/RET= ]  | select date while prompted                   		:drill:
+:PROPERTIES:
+:ID:       31ace02e-5233-45ef-b774-571a99b52781
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x C-t= ]  | toggle custom format display for dates/times 		:drill:
+:PROPERTIES:
+:ID:       048201ea-6d5d-47b6-a16a-d4da6d4cdf6c
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** Clocking time
+
+*** [ =C-c C-x C-i= ]   | start clock on current item           		:drill:
+:PROPERTIES:
+:ID:       87612c79-5624-4253-abfa-06d642b7c6d4
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c C-x C-o/x= ] | stop/cancel clock on current item     		:drill:
+:PROPERTIES:
+:ID:       a8349c27-7519-4b55-8cdd-b75203d198bb
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c C-x C-d= ]   | display total subtree times           		:drill:
+:PROPERTIES:
+:ID:       af2a2922-53e8-499c-b474-330b7406b430
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c C-c= ]       | remove displayed times                		:drill:
+:PROPERTIES:
+:ID:       babf4219-d741-4dca-ad65-076c4ed9f815
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** [ =C-c C-x C-r= ]   | insert/update table with clock report 		:drill:
+:PROPERTIES:
+:ID:       294551f1-2d7f-4a0a-8ed2-e846e73c07c7
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Agenda Views
+
+** [ =C-c [= ]       | add/move current file to front of agenda 		:drill:
+:PROPERTIES:
+:ID:       f469d151-3cae-453e-8b37-622c9102483f
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c ]= ]       | remove current file from your agenda     		:drill:
+:PROPERTIES:
+:ID:       a328f5b7-78dc-4b1e-8703-5c1558710846
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-'= ]         | cycle through agenda file list           		:drill:
+:PROPERTIES:
+:ID:       26c7f9cb-7222-4ff0-aa4b-f86d2fa2c863
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x </>= ] | set/remove restriction lock              		:drill:
+:PROPERTIES:
+:ID:       f6a993f3-bea1-408a-b9ba-5a1be686a86a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c a a= ]     | compile agenda for the current week      		:drill:
+:PROPERTIES:
+:ID:       ce4d7025-7432-4f19-9e44-6ee5347e0a8a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c a t= ]     | compile global TODO list                 		:drill:
+:PROPERTIES:
+:ID:       c2d57329-30d6-4332-809c-ee8e133311f5
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c a T= ]     | compile TODO list for specific keyword   		:drill:
+:PROPERTIES:
+:ID:       a2d109ac-b60a-479b-986e-8a1537089cba
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c a m= ]     | match tags, TODO kwds, properties        		:drill:
+:PROPERTIES:
+:ID:       41fc51ff-b049-49a0-8730-e639d8bc7ac9
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c a M= ]     | match only in TODO entries               		:drill:
+:PROPERTIES:
+:ID:       157ed1aa-491d-45cb-855c-9457822ceee8
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c a #= ]     | find stuck projects                      		:drill:
+:PROPERTIES:
+:ID:       08661427-d56b-4f09-9f91-92d52cfa29e9
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c a L= ]     | show timeline of current org file        		:drill:
+:PROPERTIES:
+:ID:       88e0d78d-821f-434d-b9c8-c0c3e1ffb751
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c a C= ]     | configure custom commands                		:drill:
+:PROPERTIES:
+:ID:       ffb1b055-9251-4d5c-8491-1d2d9bb85681
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-o= ]     | agenda for date at cursor                		:drill:
+:PROPERTIES:
+:ID:       f1db16cd-c4bb-48e1-afa4-d281720ab8d7
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** Commands available in an agenda buffer
+*** View Org file
+
+**** [ =SPC/mouse-3= ] | show original location of item               		:drill:
+:PROPERTIES:
+:ID:       42996f63-b6da-4e90-9fee-880526abd9da
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =L= ]           | show and recenter window                     		:drill:
+:PROPERTIES:
+:ID:       0ace7a0b-345c-41e1-80c9-c9952875ca80
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =TAB/mouse-2= ] | goto original location in other window       		:drill:
+:PROPERTIES:
+:ID:       5138f775-278c-46f8-96fe-4ce8f1f4b7e6
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =RET= ]         | goto original location, delete other windows 		:drill:
+:PROPERTIES:
+:ID:       1c3bdc5e-5bfd-4dd5-9e3c-07537e403195
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-c C-x b= ]   | show subtree in indirect buffer, ded.\ frame 		:drill:
+:PROPERTIES:
+:ID:       b3c0fe6f-d109-4479-b681-c42101acbf19
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =F= ]           | toggle follow-mode                           		:drill:
+:PROPERTIES:
+:ID:       f6f90ce5-e014-44a3-bbc8-fe12bb9043bc
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** Change display
+
+**** [ =o= ]             | delete other windows                      		:drill:
+:PROPERTIES:
+:ID:       013cf61b-63f4-458d-ada1-7fffe436fc69
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =v= ]             | view mode dispatcher                      		:drill:
+:PROPERTIES:
+:ID:       63db22fa-334f-4b27-81f0-c96c0d95be62
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =d w vm vy vSP= ] | switch to day/week/month/year/def view    		:drill:
+:PROPERTIES:
+:ID:       e9cb3f1a-d825-4dfb-8936-6d96b6490629
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =D / G / K= ]     | toggle diary entries / time grid / habits 		:drill:
+:PROPERTIES:
+:ID:       0e3e3d7e-6e0a-4924-a923-13aaef2241af
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =E / R= ]         | toggle entry text / clock report          		:drill:
+:PROPERTIES:
+:ID:       90bf1eda-be6e-495b-8d84-ea86f9bbf0a8
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =l / v l/L/c= ]   | toggle display of logbook entries         		:drill:
+:PROPERTIES:
+:ID:       84b69b53-d653-4e74-923e-036580b9e01e
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =v a/A= ]         | toggle inclusion of archived trees/files  		:drill:
+:PROPERTIES:
+:ID:       9847fb19-d5fb-4e48-a630-d1a04a8ad7cb
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =r / g= ]         | refresh agenda buffer with any changes    		:drill:
+:PROPERTIES:
+:ID:       d2205ce2-fd26-45f7-a47b-b7e519a1b074
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =/= ]             | filter with respect to a tag              		:drill:
+:PROPERTIES:
+:ID:       05dd9d05-fcfe-4dc7-a9c6-31a290615066
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =s= ]             | save all org-mode buffers                 		:drill:
+:PROPERTIES:
+:ID:       9f720f08-8aa9-4de8-95a2-b1510139d638
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =f / b= ]         | display next/previous day,week,...        		:drill:
+:PROPERTIES:
+:ID:       2d401afb-858b-473c-8740-1f091891cb15
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =. / j= ]         | goto today / some date (prompt)           		:drill:
+:PROPERTIES:
+:ID:       1ce54668-5b73-434b-8015-605072518746
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** Remote editing
+
+**** [ =0-9= ]          | digit argument                              		:drill:
+:PROPERTIES:
+:ID:       092bb607-f09f-46d3-89cc-87c6b59f533b
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =t= ]            | change state of current TODO item           		:drill:
+:PROPERTIES:
+:ID:       3cc6ea34-de21-49ee-a222-73d79b8446e8
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-k= ]          | kill item and source                        		:drill:
+:PROPERTIES:
+:ID:       74c6b6f5-bd95-4f15-ac3e-0f36f5939d8c
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =/ a= ]          | archive default                             		:drill:
+:PROPERTIES:
+:ID:       33cf6e69-5f16-4d5c-893a-3b1f3dd69065
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-c C-w= ]      | refile the subtree                          		:drill:
+:PROPERTIES:
+:ID:       f659579a-7ecb-4220-a56c-902c1861fb11
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =: / T= ]        | set/show tags of current headline           		:drill:
+:PROPERTIES:
+:ID:       7a7938a9-b9c8-46b5-b668-77bb70b6f53b
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =e= ]            | set effort property (prefix=nth)            		:drill:
+:PROPERTIES:
+:ID:       a9260aa9-29cf-486d-ad8d-cb2ff17099c7
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =, / P= ]        | set / compute priority of current item      		:drill:
+:PROPERTIES:
+:ID:       698a9534-b9ab-46ae-8e00-e79bf56ff850
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =S-UP/DOWN= ]    | raise/lower priority of current item        		:drill:
+:PROPERTIES:
+:ID:       20ba6270-7bfd-4733-9d0b-90db06da2834
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-c C-a= ]      | run an attachment command                   		:drill:
+:PROPERTIES:
+:ID:       52c92342-d221-4ffb-9067-aee391b624f8
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C-c C-s/d= ]    | schedule/set deadline for this item         		:drill:
+:PROPERTIES:
+:ID:       d93c3a52-5de4-4ea3-93c4-0f500e4fea57
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =S-LEFT/RIGHT= ] | change timestamp one day earlier/later      		:drill:
+:PROPERTIES:
+:ID:       7c879eb3-8474-43fa-b74c-ce3a05bb8f56
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =>= ]            | change timestamp to today                   		:drill:
+:PROPERTIES:
+:ID:       0c354935-6702-4b4b-bf33-757aa2c6d873
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =i= ]            | insert new entry into diary                 		:drill:
+:PROPERTIES:
+:ID:       97d4eeef-5ef9-4c1d-bff2-7ea442ba2bb7
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =I / O / X= ]    | start/stop/cancel the clock on current item 		:drill:
+:PROPERTIES:
+:ID:       d270e227-03f7-44dc-a3a9-a8bc21c39f3a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =J= ]            | jump to running clock entry                 		:drill:
+:PROPERTIES:
+:ID:       9bc7d217-e951-437d-be73-d8cfb0df6f68
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =m / u / B= ]    | mark / unmark / execute bulk action         		:drill:
+:PROPERTIES:
+:ID:       34267d5c-1c28-4827-906b-02a409cfebd7
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** Misc
+
+**** [ =C-c C-o= ] | follow one or offer all links in current entry 		:drill:
+:PROPERTIES:
+:ID:       815a878b-024f-4c70-a6f4-e87587bbc412
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** Calendar commands
+
+**** [ =c= ] | find agenda cursor date in calendar     		:drill:
+:PROPERTIES:
+:ID:       d3e4b723-ccec-44c7-9105-41f6c7a18e5a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =c= ] | compute agenda for calendar cursor date 		:drill:
+:PROPERTIES:
+:ID:       af669c7e-837d-463e-b387-be549f5d616c
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =M= ] | show phases of the moon                 		:drill:
+:PROPERTIES:
+:ID:       66ac21cc-d555-4728-b959-b1b034876f6c
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =S= ] | show sunrise/sunset times               		:drill:
+:PROPERTIES:
+:ID:       a841e474-c91f-4145-aee5-76888633b185
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =H= ] | show holidays                           		:drill:
+:PROPERTIES:
+:ID:       6e5ca7b8-4ef4-451c-9fb8-dfc362af37e8
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =C= ] | convert date to other calendars         		:drill:
+:PROPERTIES:
+:ID:       6dbc31cb-bdf3-49a3-8238-f7640bd0cc0b
+:END:
+
+:) The harder you work, The happier you are. :)
+
+*** Quit and Exit
+
+**** [ =q= ] | quit agenda, remove agenda buffer      		:drill:
+:PROPERTIES:
+:ID:       2abfcac8-d1fd-43bf-9856-5cf0d5f5bbcb
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** [ =x= ] | exit agenda, remove all agenda buffers 		:drill:
+:PROPERTIES:
+:ID:       fffcc090-fd0f-4a95-9ca9-bd31f5ecdb95
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* LaTeX and cdlatex-mode
+
+** [ =C-c C-x C-l= ] | preview LaTeX fragment                   		:drill:
+:PROPERTIES:
+:ID:       51624455-40cb-4011-9c9e-def7c827a76f
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =TAB= ]         | expand abbreviation (cdlatex-mode)       		:drill:
+:PROPERTIES:
+:ID:       5ca813bb-a831-438f-8ee0-8f5a452d8419
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =` / '= ]       | insert/modify math symbol (cdlatex-mode) 		:drill:
+:PROPERTIES:
+:ID:       cbd25c6a-5453-4222-b613-d69dd15e06b6
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x [= ]   | insert citation using RefTeX             		:drill:
+:PROPERTIES:
+:ID:       af6a71ab-4031-4b9c-84e2-8a3e316bdcd3
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Exporting and Publishing
+Exporting creates files with extensions .txt and .html in the current
+directory. Publishing puts the resulting file into some other place.
+
+** [ =C-c C-e= ]              | export/publish dispatcher                  		:drill:
+:PROPERTIES:
+:ID:       6f83bcd9-6e58-4e7b-8683-0321c6a1bdbb
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-e v= ]            | export visible part only                   		:drill:
+:PROPERTIES:
+:ID:       1e96b925-219f-4341-81ab-a5a1784af28e
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-e t= ]            | insert template of export options          		:drill:
+:PROPERTIES:
+:ID:       39c6f50b-b7fd-4b01-9350-8c49044f15aa
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c := ]                | toggle fixed width for entry or region     		:drill:
+:PROPERTIES:
+:ID:       52e6f255-ae6b-40e8-9cde-445636cce536
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-c C-x {\tt\char`\}= ] | toggle pretty display of scripts, entities 		:drill:
+:PROPERTIES:
+:ID:       f6a3b635-6698-4aa8-a059-9c03ef3af17a
+:END:
+
+:) The harder you work, The happier you are. :)
+
+**** Comments: Text not being exported
+Lines starting with # and subtrees starting with =COMMENT= are never
+exported.
+
+***** [ =C-c ;= ] | toggle COMMENT keyword on entry 		:drill:
+:PROPERTIES:
+:ID:       450a25e1-917d-49fe-937a-5669fa6d0cfc
+:END:
+
+:) The harder you work, The happier you are. :)
+
+* Dynamic Blocks
+
+** [ =C-c C-x C-u= ]     | update dynamic block at point 		:drill:
+:PROPERTIES:
+:ID:       1e358e49-3816-4fb1-81c4-49f585dde99f
+:END:
+
+:) The harder you work, The happier you are. :)
+
+** [ =C-u C-c C-x C-u= ] | update all dynamic blocks     		:drill:
+:PROPERTIES:
+:ID:       21c9f44d-171b-453e-8ac9-9dbda84ce964
+:END:
+
+:) The harder you work, The happier you are. :)
+
+
+* Footnotes
+1. This is only a suggestion for a binding of this command.  Choose your
+   own key as shown under ACTIVATION.
+2. Keybinding affected by =org-support-shift-select= and also
+   =org-replace-disputed-keys=.
