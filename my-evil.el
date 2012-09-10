@@ -5,8 +5,8 @@
 
 ;;; org agenda -- leave in emacs mode but add j & k
 
-(define-key org-agenda-mode-map "j" 'evil-next-line)
-(define-key org-agenda-mode-map "k" 'evil-previous-line)
+;;(define-key org-agenda-mode-map "j" 'evil-next-line)
+;;(define-key org-agenda-mode-map "k" 'evil-previous-line)
 
 
 ;;; key chords for simultaneous key presses for common commands
